@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-lang="Sobre nós">Sobre nós</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/tferp.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/about.css" rel="stylesheet">
+
+    <link rel="canonical" href="http://127.0.0.1:5500/zh/about.html">
+</head>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div id="header-box" class="container-xl">
+            <div id="header-content"
+                class="header-content container-fluid  position-relative d-flex align-items-center ">
+                <a href="index.html" class="logo d-flex align-items-center ">
+                    <img src="assets/img/Logo-white.png" alt="">
+                </a>
+                <div class="nav-list" id="nav-list">
+                    <nav id="navmenu" class="navmenu me-auto">
+                        <ul>
+                            <li class="dropdown"><a><span data-lang="Para quem">Para quem?</span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold-white.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="nav-card">
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90"
+                                                    data-lang="Para seu negócio que vende">Para seu negócio que
+                                                    vende</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="pedidos-3K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 3 mil pedidos/mês">Até 3 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px "
+                                                                data-lang="Empresas que vendem até 100 pedidos por dia.">
+                                                                Empresas que vendem até 100 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-9K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 9 mil pedidos/mês">Até 9 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px gs-13px"
+                                                                data-lang="Empresas que vendem até 300 pedidos por dia.">
+                                                                Empresas que vendem até 300
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-15K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 15 mil pedidos/mês">Até 15 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até 500 pedidos por dia.">
+                                                                Empresas que vendem até 500 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-30K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até ou + de 30 mil pedidos/mês">Até ou + de
+                                                                30 mil pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até ou mais de 1.000 pedidos por dia.">
+                                                                Empresas que
+                                                                vendem até ou mais de 1.000
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90" data-lang="Calcule suas taxas">
+                                                    Calcule suas taxas</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="simulador.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/calculator.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Simulador de preço">Simulador de preço
+                                                            </div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Calcule seu preço final de um jeito fácil com uma calculadora de vendas">
+                                                                Calcule seu preço final de um jeito fácil com
+                                                                uma
+                                                                calculadora de vendas.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="blue-90 fs-13px" data-lang="Todas as funcionalidades">Todas as
+                                            funcionalidades <img src="assets/svg/arrow-up-right.svg" alt="">
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="Preços.html" data-lang="Preços">Preços</a></li>
+                            <li><a href="blog.html" data-lang="Blog">Blog</a></li>
+                            <li class="dropdown"><a><span data-lang="Soluções">Soluções</span> <img class="ml-5px"
+                                        src="assets/svg/caret-down-bold-white.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Para seu negócio que vende">Para seu negócio que vende</div>
+                                        </div>
+                                        <div class="dropdown-cards">
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tffiscal.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Fiscal">TF Fiscal <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Emita notas fiscais com facilidade.">Emita notas fiscais
+                                                    com facilidade.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tftalk.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Talk">TF Talk <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Responda seu clientes com inteligência artificial (IA).">
+                                                    Responda seu clientes com inteligência artificial (IA).</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfwms.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF WMS">TF WMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Gerencie seu estoque em tempo real.">Gerencie seu
+                                                    estoque em tempo real.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfshop.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Shop">TF Shop</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Compre e venda on-line sem se preocupar com estoque.">
+                                                    Compre e venda on-line sem se preocupar com estoque.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-order.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF OMS">TF OMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Lorem ipsum dolor sit amet consectetur. Quis venenatis.">
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur. Quis venenatis.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="about.html" data-lang="Sobre nós">Sobre nós</a></li>
+                        </ul>
+                        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+                    </nav>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown nav-help"><a><span data-lang="Ajuda">Ajuda</span><img class="ml-5px"
+                                        src="assets/svg/caret-down-bold-white.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Para tirar dúvidas</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px"
+                                                        data-lang="Suporte e atendimento">Suporte e atendimento
+                                                    </div>
+                                                    <div class="blue-65 fs-13px ">(11) 97998.7003
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="help.html" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/question.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Central de ajuda">
+                                                        Central de ajuda</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Comercial">Comercial
+                                                    </div>
+                                                    <div class="blue-65 fs-13px">(11) 96605.4427</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="btn-getstarted" href="login.html" data-lang="Entre ou cadastre-se">Entre ou
+                        cadastre-se</a>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold-white.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Selecione o seu idioma">Selecione o seu idioma</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a class="dropdown-button lang-btn" data-lang="pt-br">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/pt-br.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Português (PT-BR)">
+                                                        Português (PT-BR)</div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-button lang-btn" data-lang="zh">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/zh.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="中文 - 简体 (CN)">中文 - 简体
+                                                        (CN)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="en">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/en.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="English (US)">English
+                                                        (US)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="es">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/es.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Español (ES)">Español
+                                                        (ES)
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-button">
+                    <img id="list-bold" class="list-bold" src="assets/svg/list-bold-white.svg" alt="">
+                    <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+    </style>
+
+    <main class="main">
+        <div class="about-header">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="about-header-text">
+                        <div class="blue2 mb-12px fs-20px" data-lang="Muito além de um ERP">Muito além de um ERP</div>
+                        <div class="white fs-61px fw-900 mb-12px Poppins"
+                            data-lang="NOSSA HISTÓRIA COMEÇA COM PESSOAS, EVOLUI COM TECNOLOGIA.">NOSSA HISTÓRIA COMEÇA
+                            COM PESSOAS, EVOLUI COM
+                            TECNOLOGIA.
+                        </div>
+                        <div class="fs-20px grey-60"
+                            data-lang="A TF ERP nasceu para simplificar o presente e construir o futuro de empresas que valorizam conexões reais.">
+                            A TF ERP nasceu para simplificar o presente e construir o futuro de
+                            empresas que valorizam
+                            conexões reais.</div>
+                    </div>
+                    <div class="about-header-img">
+                        <img src="assets/img/about-header-image.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="abou-info">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="about-info-text">
+                        <div class="blue-90 fs-49px mb-12px Poppins" data-lang="O início da TF ERP">O início da TF ERP
+                        </div>
+                        <div class="blue-65 fs-20px mb-64px lh-120"
+                            data-lang="Desde 2021, temos como propósito impactar positivamente pessoas por meio de conexões sólidas.">
+                            Desde 2021, temos como propósito impactar
+                            positivamente
+                            pessoas
+                            por
+                            meio de conexões sólidas.</div>
+                        <div class="fs-20px blue-65 mb-24px fw-300 lh-120"
+                            data-lang="Paulo Fang iniciou sua carreira na China como vendedor em um e-commerce, desenvolvendo um forte relacionamento com os principais marketplaces chineses. Com uma visão estratégica a partir da perspectiva do vendedor digital, identificou no Brasil uma grande oportunidade de apostar no comércio eletrônico.">
+                            Paulo Fang iniciou sua carreira na China como
+                            vendedor em
+                            um
+                            e-commerce, desenvolvendo um forte
+                            relacionamento com os principais marketplaces chineses. Com uma visão estratégica a partir
+                            da
+                            perspectiva do vendedor digital, identificou no Brasil uma grande oportunidade de apostar no
+                            comércio eletrônico.</div>
+                        <div class="fs-20px blue-65 fw-300 lh-120"
+                            data-lang="Ao chegar ao Brasil, Paulo trouxe consigo tecnologias de software desenvolvidas na China — o país que mais vende online no mundo. Combinando sua experiência como e-seller e o poder da tecnologia chinesa, ele passou a atuar no mercado brasileiro com a missão de facilitar a gestão de vendas para os vendedores digitais locais. Seu objetivo é aumentar a produtividade e, consequentemente, a lucratividade dos e-sellers brasileiros.">
+                            Ao chegar ao Brasil, Paulo trouxe consigo tecnologias
+                            de software
+                            desenvolvidas na China — o país que mais vende online no mundo. Combinando sua experiência
+                            como
+                            e-seller e o poder da tecnologia chinesa, ele passou a atuar no mercado brasileiro com a
+                            missão
+                            de
+                            facilitar a gestão de vendas para os vendedores digitais locais. Seu objetivo é aumentar a
+                            produtividade e, consequentemente, a lucratividade dos e-sellers brasileiros.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-history">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="fs-39px mb-40px blue-90 Poppins" data-lang="Nossa história">Nossa história</div>
+                    <div class="about-history-row">
+                        <div class="about-history-item">
+                            <div class="about-history-item-year">2025</div>
+                            <div class="about-history-item-title">TF Shop</div>
+                            <div class="about-history-item-info" data-lang="Lançamento da plataforma de Dropshipping.">
+                                Lançamento da plataforma de Dropshipping.</div>
+                        </div>
+                        <div class="about-history-item">
+                            <div class="about-history-item-year">2023</div>
+                            <div class="about-history-item-title">TF ERP 3.0</div>
+                            <div class="about-history-item-info"
+                                data-lang="Lançamento da versão 3.0, onde o público alvo seria os brasileiros.">
+                                Lançamento da versão 3.0, onde o público alvo seria os
+                                brasileiros.</div>
+                        </div>
+                        <div class="about-history-item">
+                            <div class="about-history-item-year">2021</div>
+                            <div class="about-history-item-title">TF Talk</div>
+                            <div class="about-history-item-info"
+                                data-lang="Lançamento do chat para suporte aos clientes com uso de AI.">Lançamento do
+                                chat para suporte aos clientes com uso de
+                                AI.
+                            </div>
+                        </div>
+                        <div class="about-history-item">
+                            <div class="about-history-item-year">2020</div>
+                            <div class="about-history-item-title" data-lang="Brasil">Brasil</div>
+                            <div class="about-history-item-info" data-lang="Início da empresa no Brasil">Início da
+                                empresa no Brasil</div>
+                        </div>
+                        <div class="about-history-item">
+                            <div class="about-history-item-year">2015</div>
+                            <div class="about-history-item-title" data-lang="Início das operações">Início das operações
+                            </div>
+                            <div class="about-history-item-info" data-lang="Lançamento do ERP“旺销王” (Wangxiao Wang)">
+                                Lançamento do ERP “旺销王”
+                                (Wangxiao Wang)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" mission">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="row gy-4">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="team-member">
+                                <div class="fs-39px mb-12px blue-90 Poppins" data-lang="Missão"> Missão</div>
+                                <div class="fs-20px blue-65 mb-24px fw-300 lh-120"
+                                    data-lang="Oferecer uma plataforma de alta performance e tecnologia de ponta, ao mesmo tempo simples, intuitiva e acessível para todo e-seller que busca mais produtividade e lucro dentro do mercado digital.">
+                                    Oferecer uma
+                                    plataforma de alta
+                                    performance e
+                                    tecnologia de
+                                    ponta, ao mesmo tempo
+                                    simples, intuitiva e acessível para todo e-seller que busca mais
+                                    produtividade e
+                                    lucro
+                                    dentro do mercado digital.</div>
+                                <div class="fs-20px blue-65 fw-300 lh-120"
+                                    data-lang="Tornando o comércio de comércio eletrônico brasileiro mais simples.">
+                                    Tornando o comércio de
+                                    comércio eletrônico
+                                    brasileiro mais
+                                    simples.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="team-member">
+                                <div class="fs-39px mb-12px blue-90 Poppins" data-lang="Posicionamento"> Posicionamento
+                                </div>
+                                <div class="fs-20px blue-65 fw-300 lh-120"
+                                    data-lang="Simplicidade e inovação para o seu e-commerce crescer. Tudo o que você precisa para expandir seu negócio, em um só lugar.">
+                                    Simplicidade e inovação
+                                    para o seu e-commerce
+                                    crescer.
+                                    Tudo o que você precisa para expandir seu negócio, em um só
+                                    lugar.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="valores">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="mb-40px">
+                        <div class="white fs-49px mb-12px Poppins" data-lang="Valores">Valores</div>
+                        <div class="fs-20px grey-60 lh-120"
+                            data-lang="Serviço em primeiro lugar, melhoria contínua, coragem para empreender.">Serviço
+                            em primeiro lugar, melhoria
+                            contínua, coragem para
+                            empreender.
+                        </div>
+                    </div>
+                    <div class="row gy-4 mb-16px">
+                        <div class="col-lg-6 valores-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/person-simple-circle.svg" alt="">
+                            </div>
+                            <div class="valores-item-title" data-lang="Acessibilidade">Acessibilidade</div>
+                            <div class="valores-item-info" data-lang="Facilitamos o acesso à tecnologia para todos.">
+                                Facilitamos o acesso à tecnologia para
+                                todos.</div>
+                        </div>
+
+                        <div class="col-lg-6 valores-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="mb-24px">
+                                <img src="assets/svg/hand-heart.svg" alt="">
+                            </div>
+                            <div class="valores-item-title" data-lang="Confiança">Confiança</div>
+                            <div class="valores-item-info"
+                                data-lang="Construímos relações sólidas com base na credibilidade.">Construímos relações
+                                sólidas com base na
+                                credibilidade.</div>
+                        </div>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-6 valores-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/crown.svg" alt="">
+                            </div>
+                            <div class="valores-item-title" data-lang="Excelência">Excelência</div>
+                            <div class="valores-item-info" data-lang="Buscamos o melhor em tudo o que fazemos.">Buscamos
+                                o melhor em tudo o que fazemos.
+                            </div>
+                        </div>
+                        <div class="col-lg-6 valores-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/graph.svg" alt="">
+                            </div>
+                            <div class="valores-item-title" data-lang="Inovação">Inovação</div>
+                            <div class="valores-item-info"
+                                data-lang="Transformamos ideias em soluções que fazem a diferença.">Transformamos ideias
+                                em soluções que
+                                fazem a diferença.</div>
+                        </div>
+                        <div class="col-lg-6 valores-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/Diamond.svg" alt="">
+                            </div>
+                            <div class="valores-item-title" data-lang="Transparência">Transparência</div>
+                            <div class="valores-item-info" data-lang="Agimos com clareza, ética e responsabilidade.">
+                                Agimos com clareza, ética e
+                                responsabilidade.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reconhecimentos">
+            <div class="container ">
+                <div class="container-content">
+                    <div class="mb-40px blue-90 fs-49px Poppins" data-lang="Reconhecimentos e prêmios">
+                        Reconhecimentos e prêmios
+                    </div>
+                    <div class="row gy-4 " data-aos-delay="100">
+                        <div class="col-lg-6 reconhecimentos-card " data-aos-delay="100">
+                            <img class="mb-24px" src="assets/img/tkshop.png" alt="">
+                            <div class="reconhecimentos-card-title" data-lang="Parceiro oficial do TikTok Shop">Parceiro
+                                oficial do TikTok Shop
+                            </div>
+                            <div class="reconhecimentos-card-info"
+                                data-lang="Com integração rápida e suporte especializado, ajudamos você a vender mais e crescer na plataforma.">
+                                Com integração rápida e suporte
+                                especializado,
+                                ajudamos você a
+                                vender mais e crescer na
+                                plataforma.</div>
+                        </div>
+                        <div class="col-lg-6 reconhecimentos-card" data-aos-delay="200">
+                            <img class="mb-24px" src="assets/img/partents.png" alt="">
+                            <div>
+                                <div class="reconhecimentos-card-title"
+                                    data-lang="Somos parceiros Premium Partners certificados pela Shopee">Somos
+                                    parceiros Premium
+                                    Partners certificados
+                                    pela Shopee
+                                </div>
+                                <div class="reconhecimentos-card-info"
+                                    data-lang="A TF ERP facilita sua gestão na Shopee com soluções completas para otimizar vendas, controlar estoque e impulsionar seu crescimento.">
+                                    A TF ERP facilita sua gestão
+                                    na Shopee com
+                                    soluções
+                                    completas
+                                    para
+                                    otimizar vendas, controlar estoque e impulsionar seu
+                                    crescimento.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gy-4 mb-16px" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-6 reconhecimentos-item steps-item" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/trophy.svg" alt="">
+                            </div>
+                            <div class="reconhecimentos-item-text"
+                                data-lang="Melhor fornecedor de serviços de software para Aliexpress.">Melhor fornecedor
+                                de serviços de
+                                software para
+                                Aliexpress.
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 reconhecimentos-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="mb-24px">
+                                <img src="assets/svg/trophy.svg" alt="">
+                            </div>
+                            <div class=" reconhecimentos-item-text"
+                                data-lang="JUMIA 22 fornecedor de serviços certificado do ano.">JUMIA 22 fornecedor de
+                                serviços
+                                certificado do ano.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-6 reconhecimentos-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/trophy.svg" alt="">
+                            </div>
+                            <div class="reconhecimentos-item-text"
+                                data-lang="21 estrelas anuais do serviço ecológico Aliexpress.">21 estrelas anuais do
+                                serviço
+                                ecológico Aliexpress.
+                            </div>
+                        </div>
+                        <div class="col-lg-6 reconhecimentos-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/trophy.svg" alt="">
+                            </div>
+                            <div class=" reconhecimentos-item-text" data-lang="18º ano Aliexpress Ecostar.">18º ano
+                                Aliexpress Ecostar.
+                            </div>
+                        </div>
+                        <div class="col-lg-6 reconhecimentos-item " data-aos="fade-up" data-aos-delay="100">
+                            <div class="mb-24px">
+                                <img src="assets/svg/trophy.svg" alt="">
+                            </div>
+                            <div class=" reconhecimentos-item-text"
+                                data-lang="Designação de navegador-chefe aliexpress.">Designação de navegador-chefe
+                                aliexpress.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scheme">
+            <div class="container " data-aos="fade-up" data-aos-delay="100">
+                <div class="container-content">
+                    <div class="mb-40px">
+                        <div class="fs-49px blue-90 Poppins" data-lang="Soluções para uma gestão completa">Soluções para
+                            uma gestão completa</div>
+                    </div>
+                    <div class="row">
+                        <div class="card-product">
+                            <div class="img" onclick="window.open('https://oms.tfoms.com.br/')">
+                                <img src="assets/svg/TF-OMS.svg" alt="">
+                            </div>
+                            <div class="card-product-title" data-lang="TF OMS">TF OMS</div>
+                            <div class="info_text fw-300 lh-120"
+                                data-lang="Lorem ipsum dolor sit amet consectetur. Dolor dignissim amet vulputate dolor lacus rhoncus amet in lacus. Mi proin massa ornare.">
+                                Lorem ipsum dolor sit amet
+                                consectetur. Dolor dignissim
+                                amet
+                                vulputate dolor lacus
+                                rhoncus amet in
+                                lacus. Mi proin massa ornare.</div>
+                        </div>
+                        <div class="card-product" onclick="window.open('https://www.tfwms.com.br/')">
+                            <div class="img">
+                                <img src="assets/svg/TF-WMS.svg" alt="">
+                            </div>
+                            <div class="card-product-title" data-lang="TF WMS">TF WMS</div>
+                            <div class="info_text fw-300 lh-120"
+                                data-lang="Gerencie seu estoque em tempo real, altere e controle o fluxo de produtos de acordo com as suas necessidades.">
+                                Gerencie seu estoque em tempo real,
+                                altere e controle o
+                                fluxo de
+                                produtos de acordo
+                                com as suas
+                                necessidades.</div>
+                        </div>
+                        <div class="card-product">
+                            <div class="img" onclick="window.open('https://www.tfshop.com.br/')">
+                                <img src="assets/svg/TF-Shop.svg" alt="">
+                            </div>
+                            <div class="card-product-title" data-lang="TF Shop">TF Shop</div>
+                            <div class="info_text fw-300 lh-120"
+                                data-lang="Expanda seu negócio sem estoque. Tudo para seu e-commerce em um só lugar: produtos, serviços, dropshipping e informações..">
+                                Expanda seu negócio sem estoque.
+                                Tudo para seu
+                                e-commerce em um só
+                                lugar: produtos,
+                                serviços,
+                                dropshipping e informações..</div>
+                        </div>
+                        <div class="card-product">
+                            <div class="img" onclick="window.open('https://www.tffiscal.com.br/')">
+                                <img src="assets/svg/TF-Fiscal.svg" alt="">
+                            </div>
+                            <div class="card-product-title" data-lang="TF Fiscal">TF Fiscal</div>
+                            <div class="info_text fw-300 lh-120 mb-24px"
+                                data-lang="Emita notas fiscais com facilidade e fature suas vendas.">Emita notas fiscais
+                                com
+                                facilidade e fature
+                                suas vendas.
+                            </div>
+                            <span class="blue" data-lang="Saiba mais">Saiba mais <img
+                                    src="assets/svg/arrow-up-right.svg" alt=""></span>
+                        </div>
+                        <div class="card-product">
+                            <div class="img"
+                                onclick="window.open('https://tfsoftware.chatplus.ai/pt/pc/downloads.html')">
+                                <img src="assets/svg/TF-Talk.svg" alt="">
+                            </div>
+                            <div class="card-product-title" data-lang="TF Talk">TF Talk</div>
+                            <div class="info_text fw-300 lh-120 mb-24px"
+                                data-lang="Automatize sua comunicação, reduza custos e aumente seus lucros com um sistema global de atendimento eficiente.">
+                                Automatize sua comunicação,
+                                reduza custos e
+                                aumente seus
+                                lucros com
+                                um sistema
+                                global
+                                de atendimento
+                                eficiente.</div>
+                            <span class="blue" data-lang="Saiba mais">Saiba mais <img
+                                    src="assets/svg/arrow-up-right.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container images-card">
+            <div class="container-content">
+                <div class="fs-49px blue-90 mb-40px" data-lang="Onde estamos">Onde estamos</div>
+                <div class="row">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="image-box">
+                            <img src="assets/img/Masp-museum-city-of-sao-paulo.png" alt="">
+                        </div>
+                        <div class="fs-31px fw-500 Poppins" data-lang="São Paulo - BR">São Paulo - BR</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="image-box">
+                            <img src="assets/img/Fuche-CN.png" alt="">
+                        </div>
+                        <div class="fs-31px fw-500 Poppins" data-lang="Fucheu - CN">Fucheu - CN</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="image-box">
+                            <img src="assets//img/Shenzhen-CN.png" alt="">
+                        </div>
+                        <div class="fs-31px fw-500 Poppins" data-lang="Shenzhen - CN">Shenzhen - CN</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" container collaborate">
+            <div class="container-content">
+                <img class="mb-24px" src="assets/img/cooperate.png" alt="">
+                <div class="fs-49px blue-90 mb-12px Poppins" data-lang="Trabalhe conosco">Trabalhe conosco</div>
+                <div class="fs-20px blue-65 mb-24px lh-120" data-lang="Venha transformar o e-commerce com a gente.">
+                    Venha transformar o e-commerce com a
+                    gente.</div>
+                <a href="" class="btn" data-lang="Acessar vagas">
+                    Acessar vagas <img class="ml-5px" src="assets/svg/arrow-up-right-white.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <div id="footer"></div>
+        <div id="messageContainer"
+            class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+        </div>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/language.js"></script>
+
+</body>
+<script>
+    const aboutHeader = document.getElementById('header')
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 24) {
+            aboutHeader.style.backgroundColor = 'unset'
+        } else {
+            aboutHeader.style.backgroundColor = '#091036'
+        }
+    })
+</script>
+
+</html>

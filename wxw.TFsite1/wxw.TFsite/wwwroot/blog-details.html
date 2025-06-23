@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-lang="blog">blog</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/tferp.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/blog-detail.css" rel="stylesheet">
+    <script src="assets/js/axios.js"></script>
+</head>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+
+<body class="index-page">
+
+    <header id="header" style="background-color: #fff;" class="header d-flex align-items-center fixed-top">
+        <div id="header-box" class="container-xl">
+            <div id="header-content"
+                class="header-content container-fluid  position-relative d-flex align-items-center ">
+                <a href="index.html" class="logo d-flex align-items-center ">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+                <div class="nav-list" id="nav-list">
+                    <nav id="navmenu" class="navmenu me-auto">
+                        <ul>
+                            <li class="dropdown"><a><span>Para quem?</span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <!-- <div class="dropdown-title">
+                      <div>Para seu negócio que vende</div>
+                      <div>Calcule suas taxas</div>
+                    </div> -->
+                                        <div class="nav-card">
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90">Para seu negócio que vende</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="pedidos-3K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px">Até 3 mil pedidos/mês
+                                                            </div>
+                                                            <div class="blue-65 fs-13px ">Empresas que vendem até 100
+                                                                pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-9K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px">Até 9 mil pedidos/mês
+                                                            </div>
+                                                            <div class="blue-65 fs-13px gs-13px">Empresas que vendem até
+                                                                300 pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-15K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px">Até 15 mil pedidos/mês
+                                                            </div>
+                                                            <div class="blue-65 fs-13px">Empresas que vendem até 500
+                                                                pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-30K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px">Até ou + de 30 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px">Empresas que vendem até ou mais
+                                                                de 1.000
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90">Calcule suas taxas</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="simulador.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/calculator.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px">Simulador de preço</div>
+                                                            <div class="blue-65 fs-13px">Calcule seu preço final de um
+                                                                jeito fácil com
+                                                                uma
+                                                                calculadora de vendas.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="blue-90 fs-13px">Todas as funcionalidades <img
+                                                src="assets/svg/arrow-up-right.svg" alt="">
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="Preços.html">Preços</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li class="dropdown"><a><span>Soluções</span> <img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Para seu negócio que vende</div>
+                                        </div>
+                                        <div class="dropdown-cards">
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tffiscal.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90">TF Fiscal <img class="f-r"
+                                                        src="assets/svg/arrow-up-right.svg" alt=""></div>
+                                                <div class="fs-13px blue-65">Emita notas fiscais com facilidade.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tftalk.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90">TF Talk <img class="f-r"
+                                                        src="assets/svg/arrow-up-right.svg" alt=""></div>
+                                                <div class="fs-13px blue-65">Responda seu clientes com inteligência
+                                                    artificial (IA).</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfwms.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90">TF WMS</div>
+                                                <div class="fs-13px blue-65">Gerencie seu estoque em tempo real.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfshop.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90">TF Shop</div>
+                                                <div class="fs-13px blue-65">Compre e venda on-line sem se preocupar com
+                                                    estoque.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-order.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90">TF OMS</div>
+                                                <div class="fs-13px blue-65">Lorem ipsum dolor sit amet consectetur.
+                                                    Quis venenatis.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">Sobre nós</a></li>
+                        </ul>
+                        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+                    </nav>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown nav-help"><a><span>Ajuda</span><img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Para tirar dúvidas</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">Suporte e atendimento</div>
+                                                    <div class="blue-65 fs-13px ">(11) 97998.7003
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="help.html" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/question.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">Central de ajuda</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">Comercial</div>
+                                                    <div class="blue-65 fs-13px">(11) 96605.4427</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="btn-getstarted" href="login.html">Entre ou cadastre-se</a>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Selecione o seu idioma</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a class="dropdown-button lang-btn" data-lang="br">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/pt-br.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">Português (PT-BR)</div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-button lang-btn" data-lang="zh">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/zh.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">中文 - 简体 (CN)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/en.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">English (US)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/es.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px">Español (ES)
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-button">
+                    <img id="list-bold" class="list-bold" src="assets/svg/list-bold.svg" alt="">
+                    <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+
+    </style>
+
+    <main class="main">
+        <div class="container detail-info">
+            <div class="container-content">
+                <div class="details-content">
+                    <div class="details-title">
+                    </div>
+                    <!-- <div>Analisar a qualidade de seus anúncios antes de publicá-los é essencial para maximizar seu
+                        potencial de vendas. Um anúncio bem elaborado não só atrai mais atenção do público, como
+                        também aumenta as chances de conversão. Detalhes como a escolha das imagens, a clareza das
+                        descrições e o uso correto de palavras-chave desempenham um papel fundamental no desempenho
+                        dos seus anúncios.
+                        Em nosso sistema, oferecemos uma análise detalhada da qualidade dos seus anúncios em todos
+                        os marketplaces com os quais temos integração.
+
+                        Para iniciar, vá até a aba Marketing e selecione a opção Diagnóstico do Produto. Uma nova
+                        guia será aberta contendo todas as informações necessárias para o gerenciamento.</div>
+                    <img src="assets/img/detail-1.png" alt="">
+                    <div>
+                        Nesta aba, você pode realizar três funções principais: <span class="blue-90">
+                            Analisar o anúncio, personalizar o
+                            banco de palavras proibidas e visualizar o histórico de verificação.
+                        </span>
+                    </div>
+                    <img src="assets/img/detail-2.png" alt="">
+                    <div>Para iniciar a análise, basta selecionar a loja desejada e definir os critérios que serão
+                        avaliados. Entre os critérios disponíveis estão:</div>
+                    <div class="blue-90">Quantidade de imagens principais;</div>
+                    <div class="blue-90">Quantidade de palavras no título;</div>
+                    <div class="blue-90">Presença de palavras proibidas;</div>
+                    <div class="blue-90">Existência de duplicidade no anúncio;</div>
+                    <div class="blue-90">Estoque preenchido.</div>
+                    <div>
+                        Após clicar em Iniciar diagnóstico, o processo será concluído em alguns segundos e o
+                        resultado aparecerá na seção Histórico de verificação.
+                    </div>
+                    <img src="assets/img/detail-3.png" alt="">
+                    <div>O status da análise será indicado em verde com a mensagem Verificação Concluída, mostrando
+                        o número de anúncios testados e os critérios definidos anteriormente.</div>
+                    <img src="assets/img/detail-4.png" alt="">
+                    <div>Caso haja algo irregular nos anúncios, será exibido um símbolo de erro ao lado do número de
+                        anúncios testados. Ao clicar nessa indicação, selecione a opção Ver produtos irregulares. Um
+                        pop-up será aberto detalhando os erros ou inconsistências identificados pelo sistema.</div>
+                    <img src="assets/img/detail-5.png" alt="">
+                    <div>
+                        Na seção Banco de Palavras Proibidas, o sistema já possui uma seleção padrão que identifica
+                        termos censurados e vetados.
+                        Você pode adicionar novas palavras que considere inadequadas e que possam afetar
+                        negativamente seus anúncios.
+                        Para adicionar uma nova palavra à lista de palavras proibidas, clique na opção Adicionar. Um
+                        pop-up será exibido solicitando que você insira a palavra desejada.
+                    </div>
+                    <img src="assets/img/detail-6.png" alt="">
+                    <div>Após preencher, clique em Confirmar para que ela seja registrada no sistema.</div>
+                    <img src="assets/img/detail-7.png" alt="">
+                    <div>Com esses passos, os anúncios de sua loja serão analisados criteriosamente pelo nosso
+                        sistema.
+
+                        Este tutorial utiliza a Shopee como exemplo, mas o processo é o mesmo para todos os
+                        marketplaces com os quais temos integração.</div> -->
+                </div>
+                <div class="col-lg-4 sidebar">
+
+                    <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <!-- Search Widget -->
+                        <div class="search-widget widget-item">
+
+                            <h3 class="widget-title">Search</h3>
+                            <form action="">
+                                <input type="text" id="searchInput">
+                                <button onclick="event.preventDefault()" type="submit"><i class="bi bi-search"
+                                        onclick="search()" title="Search"></i></button>
+                            </form>
+
+                        </div><!--/Search Widget -->
+
+                        <!-- Recent Posts Widget -->
+                        <!-- <div class="recent-posts-widget widget-item">
+
+                            <h3 class="widget-title">Recent Posts</h3>
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-1.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+                            </div>
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-2.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+                            </div>
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-3.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a>
+                                    </h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+                            </div>
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-4.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+                            </div>
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-5.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+                            </div>
+
+                        </div> -->
+                        <!--/Recent Posts Widget -->
+
+                        <!-- Categories Widget -->
+                        <div class="categories-widget widget-item">
+
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="mt-3">
+                                <!-- <li><a href="#">Tecnologia</a></li>
+                                <li><a href="#">Inovação</a></li>
+                                <li><a href="#">E-commerce</a></li>
+                                <li><a href="#">Dropshipping</a></li>
+                                <li><a href="#">ERP</a></li>
+                                <li><a href="#">Estoque</a></li>
+                                <li><a href="#">Label</a></li> -->
+                            </ul>
+
+                        </div><!--/Categories Widget -->
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="footer"></div>
+        <div id="messageContainer"
+            class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+        </div>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/language.js"></script>
+
+</body>
+<script>
+    const queryString = window.location.search; // 获取查询字符串（?name=John&age=30）
+    const urlParams = new URLSearchParams(queryString);
+    let id = urlParams.get('id') || ''
+    let cid = ''
+    post('/tf/website/blog/get_detail', {
+        id
+    }).then(res => {
+        if (res.success) {
+            const { subject, date, author, comment, cid, content } = res.data
+            let innerHTML = ''
+            const details = document.querySelector('.details-content')
+            innerHTML = `<div class="details-title">${subject}</div>`
+            details.innerHTML = innerHTML + content
+            cid = res.data.cid
+        } else {
+            $message.error(res.message);
+        }
+    })
+    getCategory()
+    function getCategory() {
+        post('/tf/website/blog/get_category').then(res => {
+            if (res.success) {
+                const category = document.querySelector('.mt-3')
+                let innerHTML = ''
+                res.data.items.forEach(item => {
+                    innerHTML += `<li><a href="blog.html?cid=${item.id}">${item.name}</a></li>`
+                });
+                category.innerHTML = innerHTML
+            } else {
+                $message.error(res.message)
+            }
+        })
+    }
+    function search() {
+        const value = document.getElementById('searchInput').value
+        window.location.href = `blog.html?cid=${cid}&keyword=${value}`
+    }
+</script>
+
+</html>

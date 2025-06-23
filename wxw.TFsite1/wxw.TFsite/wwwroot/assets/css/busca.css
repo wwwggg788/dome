@@ -1,0 +1,139 @@
+.container-content {
+    padding: 0 80px 64px;
+}
+
+.page-header .container-content {
+    padding: 112px 160px 64px;
+}
+
+
+.search-input {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.search-input>input {
+    height: 40px;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 50px;
+    border: 1px solid #D4D8E9;
+}
+
+
+input:focus {
+    outline: none;
+    /* 去除默认的蓝色轮廓 */
+    /* border: 1px solid transparent; */
+    /* 设置为透明边框 */
+}
+
+.search-input .bi-search {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accordion .result-items {
+    margin-bottom: 64px;
+}
+
+.accordion .result-item {
+    max-width: 800px;
+    padding: 0 24px 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.accordion .result-item:last-child {
+    margin-bottom: 0px;
+}
+
+.accordion .result-item:hover {
+    background-color: #F5F6FA;
+}
+
+.result-caption {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.result-content {
+    height: 38.4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: rgba(0, 9, 51, 0.65);
+    line-height: 120%;
+}
+
+.pagination-2 li a {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: rgba(5, 26, 124, 0.90);
+}
+
+.pagination-2 li:first-child a {
+    background-color: #F5F4F4;
+}
+
+.pagination-2 li:last-child a {
+    background-color: #F5F4F4;
+}
+
+
+.pagination-2 li a.active,
+.pagination-2 li a:hover {
+    background: #fff !important;
+    color: rgba(5, 26, 124, 0.90) !important;
+    border: 1px solid #2EF1FF !important;
+}
+
+.notFound-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 16px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.notFound-content-image {
+    padding: 18px;
+    background-color: #E6E9F2;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+    }
+
+    .container-content {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .search-input>input {
+        width: 100%;
+    }
+}

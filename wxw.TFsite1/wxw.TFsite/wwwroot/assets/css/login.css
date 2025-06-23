@@ -1,0 +1,315 @@
+body {
+    background-color: #F5F4F4;
+}
+
+.index-page .header {
+    height: 72px;
+}
+
+.nav-list {
+    flex: none;
+}
+
+.defautl-color {
+    color: rgba(5, 26, 124, 0.90);
+}
+
+.warning-color {
+    color: #DAA70B;
+}
+
+.green {
+    color: #127753;
+}
+
+/* .position-relative {
+    padding: 8px 30px;
+} */
+
+.login .container-content {
+    padding: 72px 80px 0;
+}
+
+.login .login-page {
+    display: flex;
+    align-items: center;
+    gap: 124px;
+}
+
+.login-page .login-image {
+    max-width: 632px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.login-page .login-image>img {
+    width: 100%;
+}
+
+.login-page .login-form {
+    width: 420px;
+    flex-shrink: 0;
+}
+
+
+.login-page .login-form .btn {
+    background-color: #fff;
+    width: 100%;
+    color: rgba(0, 6, 38, 0.90);
+    border-color: #8992BE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form .input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid #8992BE;
+    margin-bottom: 16px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border: 2px solid rgba(5, 26, 124, 0.90) !important;
+
+}
+
+.danger-input {
+    border: 2px solid #FF3106ed !important;
+}
+
+
+
+.text-with-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #8992BE;
+}
+
+.text {
+    margin: 0 20px;
+    font-size: 16px;
+    color: rgba(0, 9, 51, 0.65);
+    line-height: 120%;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    vertical-align: middle;
+    /* 关键：垂直居中对齐 */
+    position: relative;
+    margin-right: 8px;
+    outline: none;
+}
+
+/* 选中状态样式 */
+input[type="checkbox"]:checked {
+    background-color: #2EF1FF;
+    border-color: #2EF1FF;
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: none;
+    /* 移除可能的聚焦光晕 */
+    border-color: #2EF1FF;
+    /* 保持与常态一致的边框颜色 */
+}
+
+/* 选中标记 */
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    font-size: 16px;
+    color: white;
+}
+
+/* 标签样式 */
+label {
+    display: inline-flex;
+    align-items: center;
+    /* 确保内容垂直居中 */
+    line-height: 120%;
+    font-size: 16px;
+    /* 与复选框高度一致 */
+    margin-bottom: 8px;
+    color: rgba(5, 26, 124, 0.90);
+}
+
+.login-submit {
+    width: 100%;
+    color: #fff !important;
+    border: 0;
+    margin: 24px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center>a {
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.password-input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #666;
+}
+
+.toggle-button:hover {
+    color: #000;
+}
+
+.error-info {
+    position: absolute;
+    font-size: 16px;
+    color: #FF3106;
+    top: 40px;
+    left: 0;
+    /* display: flex; */
+    align-items: center;
+    display: none;
+}
+
+/* 验证码 */
+.login-page .verification {
+    width: 520px;
+    display: none;
+}
+
+.verify-container {
+    margin: 20px auto;
+    width: 300px;
+}
+
+.verification-form {
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+}
+
+.verify-table {
+    flex: 1;
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+
+.verify-cell {
+    padding: 0;
+}
+
+.verify-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.verify-input:focus {
+    border-color: #4a90e2;
+}
+
+.verify-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.verify-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* end */
+
+.result-message {
+    width: 420px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #fff;
+    display: none;
+}
+
+.countdownTimer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .login .container-content {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+
+    }
+
+    .login-page .login-image {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .result-message,
+    .login-page .login-form {
+        width: 100%;
+    }
+
+    .verification {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 996px) {
+    .login .login-page {
+        display: block;
+    }
+}

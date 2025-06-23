@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="/wwwroot/" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title data-lang="Home">Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Favicons -->
+  <link href="assets/img/tferp.ico" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+
+  <!-- SEO -->
+  <!-- <link rel="canonical" href="http://127.0.0.1:5500/zh/index.html">
+  <link rel="alternate" hreflang="zh" href="http://127.0.0.1:5500/zh/index.html"> -->
+</head>
+<style type="text/tailwindcss">
+  @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+<style>
+  /* 自定义匀速滚动样式 */
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* 创建CSS动画实现真正的匀速滚动 */
+  @keyframes continuousScroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+      /* 滚动距离为容器宽度的一半 */
+    }
+  }
+
+  /* 应用动画到滚动容器 */
+  .swiper-wrapper {
+    animation: continuousScroll 10s linear infinite !important;
+  }
+
+  /* 鼠标悬停时暂停滚动 */
+  .swiper-container:hover .swiper-wrapper {
+    animation-play-state: paused;
+  }
+
+  /* 确保内容克隆正确 */
+  .swiper-slide {
+    flex-shrink: 0 !important;
+  }
+</style>
+
+<body class="index-page">
+
+  <header id="header" style="background-color: #fff;" class="header d-flex align-items-center fixed-top">
+    <div id="header-box" class="container-xl">
+      <div id="header-content" class="header-content container-fluid  position-relative d-flex align-items-center ">
+        <a href="index.html" class="logo d-flex align-items-center ">
+          <img src="assets/img/logo.png" alt="">
+        </a>
+        <div class="nav-list" id="nav-list">
+          <nav id="navmenu" class="navmenu me-auto">
+            <ul>
+              <li class="dropdown"><a><span data-lang="Para quem">Para quem?</span>
+                  <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                <ul class="dropdown-ul">
+                  <div class="dropdown-ul-items">
+                    <!-- <div class="dropdown-title">
+                      <div>Para seu negócio que vende</div>
+                      <div>Calcule suas taxas</div>
+                    </div> -->
+                    <div class="nav-card">
+                      <div class="nav-card-item">
+                        <div class="fs-20px lh-120 blue-90" data-lang="Para seu negócio que vende">Para seu negócio que
+                          vende</div>
+                        <div class="dropdown-buttons">
+                          <a href="pedidos-3K.html" class="dropdown-button">
+                            <div class="dropdown-button-svg">
+                              <img src="assets/svg/package.svg" alt="">
+                            </div>
+                            <div>
+                              <div class="blue-90 mb-5px fs-16px" data-lang="Até 3 mil pedidos/mês">Até 3 mil
+                                pedidos/mês</div>
+                              <div class="blue-65 fs-13px " data-lang="Empresas que vendem até 100 pedidos por dia.">
+                                Empresas que vendem até 100 pedidos por dia.
+                              </div>
+                            </div>
+                          </a>
+                          <a href="pedidos-9K.html" class="dropdown-button">
+                            <div class="dropdown-button-svg">
+                              <img src="assets/svg/package.svg" alt="">
+                            </div>
+                            <div>
+                              <div class="blue-90 mb-5px fs-16px" data-lang="Até 9 mil pedidos/mês">Até 9 mil
+                                pedidos/mês</div>
+                              <div class="blue-65 fs-13px gs-13px"
+                                data-lang="Empresas que vendem até 300 pedidos por dia.">Empresas que vendem até 300
+                                pedidos por
+                                dia.</div>
+                            </div>
+                          </a>
+                          <a href="pedidos-15K.html" class="dropdown-button">
+                            <div class="dropdown-button-svg">
+                              <img src="assets/svg/package.svg" alt="">
+                            </div>
+                            <div>
+                              <div class="blue-90 mb-5px fs-16px" data-lang="Até 15 mil pedidos/mês">Até 15 mil
+                                pedidos/mês</div>
+                              <div class="blue-65 fs-13px" data-lang="Empresas que vendem até 500 pedidos por dia.">
+                                Empresas que vendem até 500 pedidos por dia.
+                              </div>
+                            </div>
+                          </a>
+                          <a href="pedidos-30K.html" class="dropdown-button">
+                            <div class="dropdown-button-svg">
+                              <img src="assets/svg/package.svg" alt="">
+                            </div>
+                            <div>
+                              <div class="blue-90 mb-5px fs-16px" data-lang="Até ou + de 30 mil pedidos/mês">Até ou + de
+                                30 mil pedidos/mês</div>
+                              <div class="blue-65 fs-13px"
+                                data-lang="Empresas que vendem até ou mais de 1.000 pedidos por dia.">Empresas que
+                                vendem até ou mais de 1.000
+                                pedidos por
+                                dia.</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-card-item">
+                        <div class="fs-20px lh-120 blue-90" data-lang="Calcule suas taxas">Calcule suas taxas</div>
+                        <div class="dropdown-buttons">
+                          <a href="simulador.html" class="dropdown-button">
+                            <div class="dropdown-button-svg">
+                              <img src="assets/svg/calculator.svg" alt="">
+                            </div>
+                            <div>
+                              <div class="blue-90 mb-5px fs-16px" data-lang="Simulador de preço">Simulador de preço
+                              </div>
+                              <div class="blue-65 fs-13px"
+                                data-lang="Calcule seu preço final de um jeito fácil com uma calculadora de vendas">
+                                Calcule seu preço final de um jeito fácil com
+                                uma
+                                calculadora de vendas.</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="blue-90 fs-13px" data-lang="Todas as funcionalidades">Todas as funcionalidades <img
+                        src="assets/svg/arrow-up-right.svg" alt="">
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li><a href="Preços.html" data-lang="Preços">Preços</a></li>
+              <li><a href="blog.html" data-lang="Blog">Blog</a></li>
+              <li class="dropdown"><a><span data-lang="Soluções">Soluções</span> <img class="ml-5px"
+                    src="assets/svg/caret-down-bold.svg" alt=""></a>
+                <ul class="dropdown-ul">
+                  <div class="dropdown-ul-items">
+                    <div class="dropdown-title">
+                      <div data-lang="Para seu negócio que vende">Para seu negócio que vende</div>
+                    </div>
+                    <div class="dropdown-cards">
+                      <div class="dropdown-card">
+                        <img class="mb-24px" src="assets/svg/Icon-tffiscal.svg" alt="">
+                        <div class="mb-5px fs-16px blue-90" data-lang="TF Fiscal">TF Fiscal <img class="f-r"
+                            src="assets/svg/arrow-up-right.svg" alt=""></div>
+                        <div class="fs-13px blue-65" data-lang="Emita notas fiscais com facilidade.">Emita notas fiscais
+                          com facilidade.</div>
+                      </div>
+                      <div class="dropdown-card">
+                        <img class="mb-24px" src="assets/svg/Icon-tftalk.svg" alt="">
+                        <div class="mb-5px fs-16px blue-90" data-lang="TF Talk">TF Talk <img class="f-r"
+                            src="assets/svg/arrow-up-right.svg" alt=""></div>
+                        <div class="fs-13px blue-65"
+                          data-lang="Responda seu clientes com inteligência artificial (IA).">
+                          Responda seu clientes com inteligência artificial (IA).</div>
+                      </div>
+                      <div class="dropdown-card">
+                        <img class="mb-24px" src="assets/svg/Icon-tfwms.svg" alt="">
+                        <div class="mb-5px fs-16px blue-90" data-lang="TF WMS">TF WMS</div>
+                        <div class="fs-13px blue-65" data-lang="Gerencie seu estoque em tempo real.">Gerencie seu
+                          estoque em tempo real.</div>
+                      </div>
+                      <div class="dropdown-card">
+                        <img class="mb-24px" src="assets/svg/Icon-tfshop.svg" alt="">
+                        <div class="mb-5px fs-16px blue-90" data-lang="TF Shop">TF Shop</div>
+                        <div class="fs-13px blue-65" data-lang="Compre e venda on-line sem se preocupar com estoque.">
+                          Compre e venda on-line sem se preocupar com estoque.</div>
+                      </div>
+                      <div class="dropdown-card">
+                        <img class="mb-24px" src="assets/svg/Icon-order.svg" alt="">
+                        <div class="mb-5px fs-16px blue-90" data-lang="TF OMS">TF OMS</div>
+                        <div class="fs-13px blue-65"
+                          data-lang="Lorem ipsum dolor sit amet consectetur. Quis venenatis.">Lorem ipsum dolor sit amet
+                          consectetur. Quis venenatis.</div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li><a href="about.html" data-lang="Sobre nós">Sobre nós</a></li>
+            </ul>
+            <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+          </nav>
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="dropdown nav-help"><a><span data-lang="Ajuda">Ajuda</span><img class="ml-5px"
+                    src="assets/svg/caret-down-bold.svg" alt=""></a>
+                <ul class="dropdown-ul">
+                  <div class="dropdown-ul-items">
+                    <div class="dropdown-title">
+                      <div>Para tirar dúvidas</div>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <a href="#" class="dropdown-button">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/whatsapp-logo.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="Suporte e atendimento">Suporte e atendimento
+                          </div>
+                          <div class="blue-65 fs-13px ">(11) 97998.7003
+                          </div>
+                        </div>
+                      </a>
+                      <a href="help.html" class="dropdown-button">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/question.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="Central de ajuda">Central de ajuda</div>
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown-button">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/whatsapp-logo.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="Comercial">Comercial</div>
+                          <div class="blue-65 fs-13px">(11) 96605.4427</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <a class="btn-getstarted" href="login.html" data-lang="Entre ou cadastre-se">Entre ou cadastre-se</a>
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span> <img class="ml-5px"
+                    src="assets/svg/caret-down-bold.svg" alt=""></a>
+                <ul class="dropdown-ul">
+                  <div class="dropdown-ul-items">
+                    <div class="dropdown-title">
+                      <div data-lang="Selecione o seu idioma">Selecione o seu idioma</div>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <a class="dropdown-button lang-btn" data-lang="pt-br">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/pt-br.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="Português (PT-BR)">Português (PT-BR)</div>
+                        </div>
+                      </a>
+                      <a class="dropdown-button lang-btn" data-lang="zh">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/zh.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="中文 - 简体 (CN)">中文 - 简体 (CN)</div>
+                        </div>
+                      </a>
+                      <a href="" class="dropdown-button lang-btn" data-lang="en">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/en.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="English (US)">English (US)</div>
+                        </div>
+                      </a>
+                      <a href="" class="dropdown-button lang-btn" data-lang="es">
+                        <div class="dropdown-button-svg">
+                          <img src="assets/svg/es.svg" alt="">
+                        </div>
+                        <div>
+                          <div class="blue-90 mb-5px fs-16px" data-lang="Español (ES)">Español (ES)
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="burger-button">
+          <img id="list-bold" class="list-bold" src="assets/svg/list-bold.svg" alt="">
+          <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <style>
+    body {
+      background-color: #F5F4F4;
+    }
+
+    .container {
+      padding: 0px !important;
+    }
+  </style>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <video style="width: 100%;height: 100%;object-fit: cover;
+    background-color: rgba(0, 0, 0, 0);object-position: 50% 50%;cursor: auto;    max-height: 650px;min-width: 620px;"
+        src="assets/video/index-hero.mp4" autoplay preload="auto" poster="assets/img/bg.png" muted playsinline></video>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1 class="Poppins" data-lang="SIMPLIFIQUE SUA GESTÃO E VENDA MAIS COM A TF ERP">SIMPLIFIQUE SUA GESTÃO E
+              VENDA MAIS COM A TF ERP</h1>
+            <p class="mb-40px"
+              data-lang="Integre suas vendas com as maiores plataformas do mercado. Alcance mais clientes e expanda seu negócio sem complicação.">
+              Integre suas vendas com as maiores plataformas do mercado. Alcance mais clientes e
+              expanda seu negócio
+              sem complicação. </p>
+            <div class="d-flex">
+              <a href="register.thml" class="btn-get-started-left" data-lang="Cadastre-se grátis">Cadastre-se grátis</a>
+              <a href="" class="btn-get-started-right" data-lang="Saiba mais">Saiba mais </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <div class="whatsApp">
+      <div class="whatsApp-text">Atendimento comercial via WhatsApp.</div>
+      <img src="assets/img/State.png" alt="">
+    </div>
+    <div class="Toast-de-cookies" id="Toastdecookies">
+      <div class="blue-90 fw-500 fs-16px lh-130"
+        data-lang="Utilizamos cookies para personalizar conteúdos, analisar anúncios e proporcionar uma experiência mais eficiente.">
+        Utilizamos cookies para personalizar conteúdos, analisar anúncios
+        e proporcionar uma experiência mais
+        eficiente.</div>
+      <div class="mb-12px lh-120 fs-14px blue-65"
+        data-lang="Alguns cookies são essenciais para o funcionamento do site e não podem ser desativados.">Alguns
+        cookies são essenciais para o funcionamento do site e não
+        podem ser desativados.</div>
+      <div class="btn" data-lang="Aceitar" onclick="hideTip()">Aceitar</div>
+    </div>
+
+
+    <section id="about" class="about section mb-72px">
+
+      <div class="container">
+
+        <div class="container-center gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <div class="subject content-title Poppins"
+              data-lang="Funcionalidades inteligentes para potencializar suas vendas">
+              Funcionalidades inteligentes para potencializar suas vendas
+            </div>
+            <div class="fs-20px blue-65 mb-40px" data-lang="Mais do que um ERP, um ecossistema de automação.">Mais do
+              que um ERP, um ecossistema de automação.</div>
+          </div>
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 3000,
+              "autoplay": {
+                "delay": 2000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 10
+                },
+                "480": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 10
+                },
+                "640": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 10
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 10
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 10
+                }
+              }
+            }
+          </script>
+            <div class="container-center-box swiper-wrapper">
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/Multi-CNPJ.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="Multi-CNPJ">Multi-CNPJ</p>
+                <div data-lang="Gerencie suas lojas de diversos marketplaces em um só lugar.">Gerencie suas lojas de
+                  diversos marketplaces em um só lugar.</div>
+              </div>
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/marketing.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="Marketing integrado">Marketing integrado</p>
+                <div data-lang="Crie e controle campanhas, promoções, cupons, anúncios e avaliações dos seus produtos.">
+                  Crie e controle campanhas, promoções, cupons, anúncios e avaliações dos seus produtos.</div>
+              </div>
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/wms.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="WMS avançado">WMS avançado</p>
+                <div data-lang="Otimize a gestão do seu estoque em tempo real.">Otimize a gestão do seu estoque em tempo
+                  real.</div>
+              </div>
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/processos.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="Automação de processos">Automação de processos</p>
+                <div data-lang="Simplifique suas operações e reduza erros com a automação da TF ERP.">Simplifique suas
+                  operações e reduza erros com a automação da TF ERP. </div>
+              </div>
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/anúncios.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="Criação de anúncios">Criação de anúncios</p>
+                <div data-lang="Importe, edite e migre seu anúncios entre marketplaces com facilidade.">Importe, edite e
+                  migre seu anúncios entre marketplaces com facilidade.</div>
+              </div>
+              <div class="box-item swiper-slide">
+                <div class="img">
+                  <img src="assets/svg/cnpj.svg" alt="">
+                </div>
+                <p class="Poppins" data-lang="Relatórios">Relatórios </p>
+                <div
+                  data-lang="Exporte mais de 30 relatórios de vendas, comissões, devolução, KPI de funcionários, entre outros.">
+                  Exporte mais de 30 relatórios de vendas, comissões, devolução, KPI de funcionários, entre outros.
+                </div>
+              </div>
+              <div class="box-item swiper-slide" style="background-color: #0325B6;">
+                <div class="img">
+                  <img src="assets/svg/arrow-circle-right.svg" alt="">
+                </div>
+                <p class="Poppins" style="color: #fff;" data-lang="Todas as funcionalidades">Todas as funcionalidades
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="about section">
+
+      <div class="container">
+        <div class="container-center">
+          <div class="col-lg-6 content mb-40px" data-aos="fade-up" data-aos-delay="100">
+            <div class="subject content-title Poppins" data-lang="Venda mais conectando-se aos maiores marketplaces">
+              Venda mais conectando-se aos maiores marketplaces
+            </div>
+          </div>
+          <div class="row gy-4" style="justify-content: space-between;">
+            <div class=" content content-card" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/tkshop.png" alt="">
+              <div class="card-content">
+                <p class="Poppins"
+                  data-lang="Integre-se ao TikTok Shop e aumente suas vendas para mais de 111 milhões de usuários.">
+                  Integre-se ao TikTok Shop e aumente suas vendas para mais de 111 milhões de usuários.</p>
+                <div
+                  data-lang="Somos parceiros oficiais do TikTok Shop. Com integração rápida e suporte especializado, ajudamos você a vender mais e crescer na plataforma.">
+                  Somos parceiros oficiais do TikTok Shop. Com integração rápida e suporte especializado, ajudamos
+                  você
+                  a
+                  vender mais e crescer na plataforma.</div>
+                <span data-lang="Saiba mais">Saiba mais <img src="assets/svg/arrow-up-right.svg" alt=""></span>
+              </div>
+
+            </div>
+
+            <div class=" content-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/partents.png" alt="">
+              <div class="card-content">
+                <p class="Poppins" data-lang="Somos parceiros Premium Partnerscertificados pela Shopee">Somos parceiros
+                  Premium
+                  Partnerscertificados pela Shopee</p>
+                <div
+                  data-lang="A TF ERP facilita sua gestão na Shopee com soluções completas para otimizar vendas, controlar estoque e impulsionar seu crescimento.">
+                  A TF ERP facilita sua gestão na Shopee com soluções completas para otimizar vendas, controlar
+                  estoque
+                  e
+                  impulsionar seu crescimento.</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+    <section id="clients" class="clients section light-background mb-64px">
+      <div class="container" data-aos="zoom-in">
+        <div class="container-center">
+          <div class="info_text mb-24px" data-lang="Conectada aos maiores marketplaces do Brasil.">Conectada aos maiores
+            marketplaces do Brasil.</div>
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+{
+  "loop": true,
+  "speed": 5000,
+  "autoplay": {
+    "delay": 0,
+    "disableOnInteraction": false
+  },
+  "slidesPerView": "auto",
+  "allowTouchMove": false,
+  "pagination": {
+    "el": ".swiper-pagination",
+    "type": "bullets",
+    "clickable": true
+  },
+  "breakpoints": {
+    "320": {
+      "slidesPerView": 2,
+      "spaceBetween": 20
+    },
+    "480": {
+      "slidesPerView": 2,
+      "spaceBetween": 50
+    },
+    "640": {
+      "slidesPerView": 2,
+      "spaceBetween": 50
+    },
+    "992": {
+      "slidesPerView": 3,
+      "spaceBetween": 50
+    },
+    "1200": {
+      "slidesPerView": 5,
+      "spaceBetween": 50
+    }
+  }
+}
+</script>
+            <div class="swiper-wrapper align-items-center platform-icon">
+              <div class="swiper-slide"><img src="assets/svg/AliExpress.svg" class="img-fluid" alt="">
+              </div>
+              <div class="swiper-slide"><img src="assets/svg/Amazon.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/Mercado.svg" class="img-fluid" alt="">
+              </div>
+              <div class="swiper-slide"><img src="assets/svg/TikTok.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/Kwai.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/Shopee.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/SHEIN.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/Temu.svg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/svg/Shopify.svg" class="img-fluid" alt="">
+              </div>
+              <div class="swiper-slide"><img src="assets/svg/Nuvemshop.svg" class="img-fluid" alt="">
+              </div>
+              <div class="swiper-slide"><img src="assets/svg/Magalu.svg" class="img-fluid" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="number section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container-center">
+          <div class="subject mb-40px Poppins" style="max-width: 650px;"
+            data-lang="Transformamos transações em resultados">
+            Transformamos transações em resultados
+          </div>
+          <div class="row gy-5 work-process-content mb-72px">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="steps-item">
+                <h1 class="Poppins">+30M</h1>
+                <div>Milhões de notas fiscais emitidas mensalmente</div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="steps-item">
+                <h1 class="Poppins">+50K</h1>
+                <div>Mil lojas cadastradas</div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="steps-item">
+                <h1 class="Poppins">+30K</h1>
+                <div>Mil vendedores cadastrados</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="information section mb-72px" style="padding: 0;">
+      <div class="container">
+        <div class="row gy-4 container-center">
+          <div class="content information-img-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/information.png" alt="">
+          </div>
+          <div class=" content information-text-card" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <div class="text-card-top"
+                data-lang="Simule o preço final da sua venda e planeje seus ganhos com precisão">Simule o preço final da
+                sua venda e planeje seus ganhos com precisão</div>
+              <div class="text-card-bottom" data-lang="Use nossa calculadora e defina sua margem de lucro.">Use nossa
+                calculadora e defina sua margem de lucro.</div>
+              <a href="simulador.html" class="btn" data-lang="Simule agora">Simule agora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="conteudo section mb-72px">
+      <div class="container">
+        <div class="row gy-4 container-center">
+          <div class="content conteudo-left" data-aos="fade-up" data-aos-delay="100">
+            <div class="conteudo-left-item">
+              <div class="imgMode">
+                <img src="assets/img/blodDaTferp.png" alt="">
+              </div>
+              <div class="titleMode" data-lang="Blog da TF ERP">Blog da TF ERP</div>
+              <div class="infoMode"
+                data-lang="Dicas, tendências e boas práticas para otimizar seus processos e impulsionar seus resultados com nossos conteúdos exclusivos">
+                Dicas, tendências e boas práticas para otimizar seus processos e impulsionar seus
+                resultados com nossos conteúdos exclusivos</div>
+              <div class="linkMode" onclick="window.location.href='blog.html'" data-lang="Ir para o blog">Ir para o blog
+                <img src="assets/svg/Arrow-right.svg" alt="">
+              </div>
+            </div>
+            <div class="conteudo-left-item">
+              <div class="imgMode">
+                <img src="assets/img/TFERPNoYouTube.png" alt="">
+              </div>
+              <div class="titleMode" data-lang="TF ERP no YouTube">TF ERP no YouTube</div>
+              <div class="infoMode"
+                data-lang="Tutoriais, webinar, entrevistas e análises para ajudar sua empresa a crescer com eficiência">
+                Tutoriais, webinar, entrevistas e análises para ajudar sua empresa a crescer com
+                eficiência</div>
+              <div class="linkMode" onclick="window.open('https://www.youtube.com/@tfsoftware')"
+                data-lang="Assista aos conteúdos">Assista aos conteúdos
+                <img src="assets/svg/arrow-up-right.svg" alt="">
+              </div>
+            </div>
+
+          </div>
+          <div class=" content conteudo-right" data-aos="fade-up" data-aos-delay="100">
+            <div class="imgMode">
+              <img src="assets/img/AssistaAoPrimeiro.png" alt="">
+            </div>
+            <div class="titleMode" data-lang="Assista ao primeiro Webinar da TF ERP">Assista ao primeiro Webinar da TF
+              ERP</div>
+            <div class="infoMode"
+              data-lang="Conheça a TF ERP e estratégias essenciais para otimizar suas vendas on-line.">Conheça a TF ERP
+              e estratégias essenciais para otimizar suas vendas on-line.</div>
+            <a href="#about" class="btn" data-lang="Assistir agora">Assistir agora <img
+                src="assets/svg/play-circle-fill.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section newsletter mb-72px">
+      <div class="container">
+        <div class="container-center">
+          <div class="mb-40px">
+            <div class="subject Poppins" data-lang="Fique por dentro das novidades">Fique por dentro das novidades</div>
+            <div class="fs-20px blue-65"
+              data-lang="Digite seu WhatsApp com DDD ou e-mail para receber lançamentos e atualizações.">Digite seu
+              WhatsApp com DDD ou e-mail para receber lançamentos e
+              atualizações.</div>
+          </div>
+          <div class="inputs">
+            <div>
+              <div class="info_text mb-5px">WhatsApp</div>
+              <!-- <input placeholder="(00) 000000000"> -->
+              <div class="input select-input">
+                <div class="custom-select">
+                  <div class="select-selected" id="selectHeader">
+                    <span>请选择...</span>
+                    <div></div>
+                  </div>
+                  <div class="select-items select-hide" id="selectItems">
+                    <div data-value="1">
+                      <img src="assets/svg/pt-br.svg" alt="BR" class="option-image">
+                      <span>BR</span>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" id="whatsApp" placeholder="(11) 00000.0000">
+              </div>
+            </div>
+            <div>
+              <div class="info_text mb-5px">E-mail</div>
+              <input class="inputStyle" id="email" placeholder="Use o formato nome@exemplo.com"
+                data-lang="Use o formato nome@exemplo.com">
+            </div>
+            <div id="sendBtn" class="blue" style="margin-top: 24px;cursor: pointer;"><span
+                data-lang="Enviar">Enviar</span> <img src="assets/svg/Arrow-right.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section newsletter mb-72px">
+      <div class="container">
+        <div class="container-center">
+          <div class="mb-40px">
+            <div class="subject Poppins" data-lang="Soluções para uma gestão completa">Soluções para uma gestão </div>
+            <div class="fs-20px blue-65">completa </div>
+          </div>
+          <div class="card-products">
+            <div class="card-product">
+              <div class="img">
+                <img src="assets/svg/TF-OMS.svg" alt="">
+              </div>
+              <div class="card-product-title" data-lang="TF OMS">TF OMS</div>
+              <div class="info_text fw-300 lh-120"
+                data-lang="Lorem ipsum dolor sit amet consectetur. Dolor dignissim amet vulputate dolor lacus rhoncus amet in lacus. Mi proin massa ornare.">
+                Lorem ipsum dolor sit amet consectetur. Dolor dignissim amet
+                vulputate dolor lacus
+                rhoncus amet in
+                lacus. Mi proin massa ornare.</div>
+            </div>
+            <div class="card-product">
+              <div class="img">
+                <img src="assets/svg/TF-WMS.svg" alt="">
+              </div>
+              <div class="card-product-title" data-lang="TF WMS">TF WMS</div>
+              <div class="info_text fw-300 lh-120"
+                data-lang="Gerencie seu estoque em tempo real, altere e controle o fluxo de produtos de acordo com as suas necessidades.">
+                Gerencie seu estoque em tempo real, altere e controle o fluxo de
+                produtos de acordo
+                com as suas
+                necessidades.</div>
+            </div>
+            <div class="card-product">
+              <div class="img">
+                <img src="assets/svg/TF-Shop.svg" alt="">
+              </div>
+              <div class="card-product-title" data-lang="TF Shop">TF Shop</div>
+              <div class="info_text fw-300 lh-120"
+                data-lang="Expanda seu negócio sem estoque. Tudo para seu e-commerce em um só lugar: produtos, serviços, dropshipping e informações..">
+                Expanda seu negócio
+                sem estoque. Tudo para seu e-commerce em um só
+                lugar: produtos,
+                serviços,
+                dropshipping e informações..</div>
+            </div>
+            <div class="card-product">
+              <div class="img">
+                <img src="assets/svg/TF-Fiscal.svg" alt="">
+              </div>
+              <div class="card-product-title" data-lang="TF Fisca">TF Fiscal</div>
+              <div class="info_text fw-300 lh-120 mb-24px"
+                data-lang="Emita notas fiscais com facilidade e fature suas vendas.">Emita notas fiscais com facilidade
+                e fature suas vendas.
+              </div>
+              <span class="blue" data-lang="Saiba mais">Saiba mais <img src="assets/svg/arrow-up-right.svg"
+                  alt=""></span>
+            </div>
+            <div class="card-product">
+              <div class="img">
+                <img src="assets/svg/TF-Talk.svg" alt="">
+              </div>
+              <div class="card-product-title" data-lang="TF Talk">TF Talk</div>
+              <div class="info_text fw-300 lh-120 mb-24px"
+                data-lang="Automatize sua comunicação, reduza custos e aumente seus lucros com um sistema global de atendimento eficiente.">
+                Automatize sua comunicação, reduza custos e aumente seus
+                lucros com
+                um sistema
+                global
+                de atendimento
+                eficiente.</div>
+              <span class="blue" data-lang="Saiba mais">Saiba mais <img src="assets/svg/arrow-up-right.svg"
+                  alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Depoimentos section mb-72px">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container-center">
+          <div class="subject Poppins" data-lang="O que nossos clientes dizem sobre nós">
+            O que nossos clientes dizem sobre nós
+          </div>
+          <div class="lh-120 fs-20px blue-65 mb-40px"
+            data-lang="Quem usa a TF ERP recomenda! Descubra por que nossa solução faz diferença.">Quem usa a TF ERP
+            recomenda! Descubra por que nossa solução faz
+            diferença.
+          </div>
+          <div class="row gy-5 work-process-content">
+            <div class="comment-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="comment">
+                <div class="info_text">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Lorem ipsum dolor sit
+                  amet, consec tetur
+                  adipiscing elit.</div>
+              </div>
+              <div class="quotemark">
+                <img src="assets/img/quotemark.png" alt="">
+                <div class="quotemark-text">
+                  <div class="quotemark-text-fir">Sofia·Gerente comercial</div>
+                  <div class="quotemark-text-dec">Shopee</div>
+                </div>
+              </div>
+            </div>
+            <div class="comment-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="comment">
+                <div class="info_text">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Lorem ipsum dolor sit
+                  amet, consec tetur
+                  adipiscing elit.</div>
+              </div>
+              <div class="quotemark">
+                <img src="assets/img/quotemark.png" alt="">
+                <div class="quotemark-text">
+                  <div class="quotemark-text-fir">Liam Pires·Vendedor</div>
+                  <div class="quotemark-text-dec">Mercado Livre</div>
+                </div>
+              </div>
+            </div>
+            <div class="comment-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="comment">
+                <div class="info_text">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Lorem ipsum dolor sit
+                  amet, consec tetur
+                  adipiscing elit.</div>
+              </div>
+              <div class="quotemark">
+                <img src="assets/img/quotemark.png" alt="">
+                <div class="quotemark-text">
+                  <div class="quotemark-text-fir">Pedro Melo·Influencer</div>
+                  <div class="quotemark-text-dec">TikTok Shop</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <div id="messageContainer"
+      class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+    </div>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/axios.js"></script>
+
+
+</body>
+<script>
+  // 获取DOM元素
+  const selectHeader = document.getElementById('selectHeader');
+  const selectItems = document.getElementById('selectItems');
+  const options = selectItems.querySelectorAll('div');
+  const Toastdecookies = document.getElementById('Toastdecookies')
+
+  const hideCookie = localStorage.getItem('hideCookie')
+  if (hideCookie) {
+    Toastdecookies.style.display = 'none'
+  }
+  function hideTip() {
+    console.log(1)
+    localStorage.setItem('hideCookie', true)
+    Toastdecookies.style.display = 'none'
+  }
+
+  // 设置默认选中第一个选项
+  if (options.length > 0) {
+    const firstOption = options[0];
+    const image = firstOption.querySelector('img').src;
+    const text = firstOption.querySelector('span').textContent;
+
+    selectHeader.innerHTML = `
+        <div style="display: flex; align-items: center;">
+          <img src="${image}" alt="${text}" class="selected-image">
+          <span>${text}</span>
+        </div>
+        <div></div>
+      `;
+
+    firstOption.classList.add('same-as-selected');
+  }
+
+  // 切换下拉列表显示状态
+  selectHeader.addEventListener('click', function (e) {
+    e.stopPropagation();
+    selectItems.classList.toggle('select-hide');
+    selectHeader.classList.toggle('select-arrow-active');
+  });
+
+  // 点击选项处理
+  options.forEach(option => {
+    option.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      // 获取选项中的图文信息
+      const image = this.querySelector('img').src;
+      const text = this.querySelector('span').textContent;
+
+      // 更新选中项显示
+      selectHeader.innerHTML = `
+          <div style="display: flex; align-items: center;">
+            <img src="${image}" alt="${text}" class="selected-image">
+            <span>${text}</span>
+          </div>
+          <div></div>
+        `;
+
+      // 隐藏下拉列表
+      selectItems.classList.add('select-hide');
+      selectHeader.classList.remove('select-arrow-active');
+
+      // 移除之前的选中状态
+      options.forEach(opt => opt.classList.remove('same-as-selected'));
+      // 添加新的选中状态
+      this.classList.add('same-as-selected');
+    });
+  });
+
+  // 点击外部关闭下拉列表
+  document.addEventListener('click', function () {
+    selectItems.classList.add('select-hide');
+    selectHeader.classList.remove('select-arrow-active');
+  });
+
+  const sendBtn = document.getElementById('sendBtn')
+  const selectInput = document.querySelector('.select-input')
+  sendBtn.addEventListener('click', () => {
+    const whatsApp = document.getElementById('whatsApp')
+    const email = document.getElementById('email')
+    selectInput.style.borderColor = '#D4D8E9'
+    email.style.borderColor = '#D4D8E9'
+    if (!whatsApp.value) {
+      selectInput.style.borderColor = 'red'
+      return
+    }
+    if (!email.value) {
+      email.style.borderColor = 'red'
+      return
+    }
+    post('/tf/website/dynamic/send_info', {
+      whatsApp: whatsApp.value,
+      email: email.value,
+    }).then(res => {
+      if (res.success) {
+        this.$message.success(res.message.replace('_', ''))
+      } else {
+        this.$message.error(res.message.replace('_', ''))
+
+      }
+    })
+  })
+
+</script>
+
+</html>

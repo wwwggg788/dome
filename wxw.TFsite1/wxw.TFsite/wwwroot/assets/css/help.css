@@ -1,0 +1,170 @@
+ .container-content {
+     padding: 64px 80px;
+ }
+
+ .page-header {
+     background-color: #F5F4F4;
+ }
+
+ .page-header .container-content {
+     padding: 112px 160px 64px;
+     background-color: #F5F4F4;
+ }
+
+ .search-input {
+     display: flex;
+     /* flex-wrap: wrap; */
+     gap: 10px;
+     position: relative;
+ }
+
+ .search-input>input {
+     height: 40px;
+     width: 500px;
+     border-radius: 20px;
+     padding-left: 50px;
+     border: 1px solid #D4D8E9;
+ }
+
+ .search-input .btn {}
+
+ input:focus {
+     outline: none;
+     /* 去除默认的蓝色轮廓 */
+     /* border: 1px solid transparent; */
+     /* 设置为透明边框 */
+ }
+
+ .search-input .bi-search {
+     position: absolute;
+     left: 20px;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+
+ .help-card .d-flex {
+     flex-wrap: wrap;
+     gap: 16px;
+     /* justify-content: space-between; */
+     /* max-width: 416px; */
+ }
+
+ .item-card {
+     overflow: hidden;
+     flex: 1;
+     min-width: 344px;
+     margin-bottom: 20px;
+     /* flex: 1; */
+     background-color: #fff;
+     border-radius: 16px;
+ }
+
+ .item-card>img {
+     width: 100%;
+ }
+
+ .item-card .item-card-text {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 24px;
+     height: 180px;
+ }
+
+ .help-questions,
+ .help-questions .container-content {
+     background-color: #F5F4F4;
+ }
+
+ .help-questions .class-item {
+     padding: 32px 0;
+     display: flex;
+ }
+
+ .help-questions .item-capiton {
+     width: 440px;
+     font-size: 48px;
+     color: rgba(0, 6, 38, 0.90);
+ }
+
+ .help-questions .item-content {
+     flex: 1;
+     /* display: flex; */
+ }
+
+ .help-questions .item-content>div {
+     cursor: pointer;
+     width: 100%;
+     height: 56px;
+     padding: 0 24px;
+     background-color: #fff;
+     color: rgba(0, 6, 38, 0.90);
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 16px;
+ }
+
+ .help-questions .item-content .header-icon {
+     width: 24px;
+     margin-right: 5px;
+ }
+
+ .help-questions .item-content .chevron {
+     width: 16px;
+ }
+
+ .title-btn,
+ .title-btn .container-content {
+     background-color: #F5F4F4;
+ }
+
+ .title-btn .title-info {
+     max-width: 700px;
+     font-size: 49px;
+     line-height: 100%;
+     color: rgba(0, 6, 38, 0.90);
+     margin-bottom: 12px;
+ }
+
+ .title-btn .title-desc {
+     font-size: 20px;
+     max-width: 700px;
+     color: rgba(0, 9, 51, 0.65);
+     margin-bottom: 24px;
+ }
+
+ .title-btn .btn {
+     color: #fff;
+     height: 40px;
+     line-height: 40px;
+     background-color: #0325B6;
+     padding-top: 0;
+     padding-bottom: 0;
+ }
+
+ @media (max-width: 768px) {
+     .container {
+         max-width: 100% !important;
+     }
+
+     .container-content {
+         padding-left: 16px !important;
+         padding-right: 16px !important;
+     }
+
+     .search-input>input {
+         flex: 1 !important;
+     }
+
+     .title-btn .btn {
+         width: 100%;
+     }
+ }
+
+ @media (max-width: 1138px) {
+     .help-questions .class-item {
+         display: block !important;
+     }
+ }

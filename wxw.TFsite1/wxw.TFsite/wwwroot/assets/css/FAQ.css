@@ -1,0 +1,93 @@
+.container-content {
+    padding: 64px 80px;
+}
+
+.page-header .container-content {
+    padding: 112px 160px 64px;
+}
+
+.search-input {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.search-input>input {
+    height: 40px;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 50px;
+    border: 1px solid #D4D8E9;
+}
+
+
+input:focus {
+    outline: none;
+    /* 去除默认的蓝色轮廓 */
+    /* border: 1px solid transparent; */
+    /* 设置为透明边框 */
+}
+
+.search-input .bi-search {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.help-questions .class-item {
+    padding: 32px 0;
+    display: flex;
+}
+
+.help-questions .item-capiton {
+    width: 440px;
+    font-size: 48px;
+    color: rgba(0, 6, 38, 0.90);
+}
+
+.help-questions .item-content {
+    flex: 1;
+    /* display: flex; */
+}
+
+.why-us .faq-container .faq-item {
+    padding: 15px 20px;
+    border-radius: 16px;
+}
+
+.why-us .faq-container .faq-item .faq-toggle {
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6E8F2;
+    border-radius: 12px;
+}
+
+.faq-active .faq-toggle {
+    background-color: #2EF1FF !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+    }
+
+    .container-content {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .help-questions .item-capiton {
+        width: 100%;
+    }
+
+    .help-questions .class-item {
+        display: block;
+    }
+}

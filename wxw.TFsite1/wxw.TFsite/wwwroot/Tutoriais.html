@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-lang="Tutoriais">Tutoriais</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/tferp.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/Tutoriais.css" rel="stylesheet">
+</head>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+
+<body class="index-page">
+
+    <header id="header" style="background-color: #fff;" class="header d-flex align-items-center fixed-top">
+        <div id="header-box" class="container-xl">
+            <div id="header-content"
+                class="header-content container-fluid  position-relative d-flex align-items-center ">
+                <a href="index.html" class="logo d-flex align-items-center ">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+                <div class="nav-list" id="nav-list">
+                    <nav id="navmenu" class="navmenu me-auto">
+                        <ul>
+                            <li class="dropdown"><a><span data-lang="Para quem">Para quem?</span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="nav-card">
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90"
+                                                    data-lang="Para seu negócio que vende">Para seu negócio que
+                                                    vende</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="pedidos-3K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 3 mil pedidos/mês">Até 3 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px "
+                                                                data-lang="Empresas que vendem até 100 pedidos por dia.">
+                                                                Empresas que vendem até 100 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-9K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 9 mil pedidos/mês">Até 9 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px gs-13px"
+                                                                data-lang="Empresas que vendem até 300 pedidos por dia.">
+                                                                Empresas que vendem até 300
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-15K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 15 mil pedidos/mês">Até 15 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até 500 pedidos por dia.">
+                                                                Empresas que vendem até 500 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-30K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até ou + de 30 mil pedidos/mês">Até ou + de
+                                                                30 mil pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até ou mais de 1.000 pedidos por dia.">
+                                                                Empresas que
+                                                                vendem até ou mais de 1.000
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90" data-lang="Calcule suas taxas">
+                                                    Calcule suas taxas</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="simulador.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/calculator.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Simulador de preço">Simulador de preço
+                                                            </div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Calcule seu preço final de um jeito fácil com uma calculadora de vendas">
+                                                                Calcule seu preço final de um jeito fácil com
+                                                                uma
+                                                                calculadora de vendas.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="blue-90 fs-13px"><span data-lang="Todas as funcionalidades">Todas as
+                                                funcionalidades</span> <img src="assets/svg/arrow-up-right.svg" alt="">
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="Preços.html" data-lang="Preços">Preços</a></li>
+                            <li><a href="blog.html" data-lang="Blog">Blog</a></li>
+                            <li class="dropdown"><a><span data-lang="Soluções">Soluções</span> <img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Para seu negócio que vende">Para seu negócio que vende</div>
+                                        </div>
+                                        <div class="dropdown-cards">
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tffiscal.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Fiscal">TF Fiscal <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Emita notas fiscais com facilidade.">Emita notas fiscais
+                                                    com facilidade.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tftalk.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Talk">TF Talk <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Responda seu clientes com inteligência artificial (IA).">
+                                                    Responda seu clientes com inteligência artificial (IA).</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfwms.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF WMS">TF WMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Gerencie seu estoque em tempo real.">Gerencie seu
+                                                    estoque em tempo real.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfshop.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Shop">TF Shop</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Compre e venda on-line sem se preocupar com estoque.">
+                                                    Compre e venda on-line sem se preocupar com estoque.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-order.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF OMS">TF OMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Lorem ipsum dolor sit amet consectetur. Quis venenatis.">
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur. Quis venenatis.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="about.html" data-lang="Sobre nós">Sobre nós</a></li>
+                        </ul>
+                        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+                    </nav>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown nav-help"><a><span data-lang="Ajuda">Ajuda</span><img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Para tirar dúvidas</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px"
+                                                        data-lang="Suporte e atendimento">Suporte e atendimento
+                                                    </div>
+                                                    <div class="blue-65 fs-13px ">(11) 97998.7003
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="help.html" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/question.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Central de ajuda">
+                                                        Central de ajuda</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Comercial">Comercial
+                                                    </div>
+                                                    <div class="blue-65 fs-13px">(11) 96605.4427</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="btn-getstarted" href="login.html" data-lang="Entre ou cadastre-se">Entre ou
+                        cadastre-se</a>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Selecione o seu idioma">Selecione o seu idioma</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a class="dropdown-button lang-btn" data-lang="pt-br">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/pt-br.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Português (PT-BR)">
+                                                        Português (PT-BR)</div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-button lang-btn" data-lang="zh">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/zh.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="中文 - 简体 (CN)">中文 - 简体
+                                                        (CN)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="en">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/en.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="English (US)">English
+                                                        (US)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="es">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/es.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Español (ES)">Español
+                                                        (ES)
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-button">
+                    <img id="list-bold" class="list-bold" src="assets/svg/list-bold.svg" alt="">
+                    <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+        body {
+            background-color: #F5F4F4;
+        }
+
+        .container {
+            padding: 0px !important;
+        }
+
+        .btn {
+            color: #fff;
+            background: #0325B6;
+            font-family: var(--heading-font);
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 0 28px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            transition: 0.5s;
+        }
+    </style>
+
+    <main class="main">
+        <div class="container page-header">
+            <div class="container-content">
+                <div class="blue fs-20px mb-12px" onclick="window.location.href='help.html'"><img class="mr-5px"
+                        src="assets/svg/Arrow-left.svg" alt=""><span data-lang="Central de ajuda">Central
+                        de ajuda</span>
+                </div>
+                <div class="blue-90 fs-61px fw-900 mb-24px Poppins" data-lang="TUTORIAIS E SOLUÇÕES">TUTORIAIS E
+                    SOLUÇÕES
+                </div>
+                <div class="search-input">
+                    <input id="searchInput" placeholder="Pesquise aqui" data-lang="Pesquise aqui"><i
+                        class="bi bi-search"></i></input>
+                    <div class="btn" onclick="search()" data-lang="Buscar">Buscar</div>
+                </div>
+            </div>
+        </div>
+        <div class="container blog work-process">
+            <div class="container-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="menu-list">
+                    <div class="menu-list-left">
+                        <!-- <div class="menu-list-item steps-item">
+                            <div data-lang="Anúncios">
+                                Anúncios
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Logística">
+                                Logística
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Pedidos">
+                                Pedidos
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Produto">
+                                Produto
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Nota fiscal">
+                                Nota fiscal
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Relatório">
+                                Relatório
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Campanhas e promoções">
+                                Campanhas e promoções
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Compras">
+                                Compras
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="SAC">
+                                SAC
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>
+                        <div class="menu-list-item steps-item">
+                            <div data-lang="Configuração da conta">
+                                Configuração da conta
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div> -->
+                    </div>
+                    <div class="menu-list-right">
+                        <div class="mb-64px" id="cidList">
+                            <!-- <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Analise seus Anúncios na TF ERP</div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Analisar a qualidade de seus
+                                        anúncios
+                                        antes de publicá-los é
+                                        essencial
+                                        para
+                                        maximizar seu potencial de vendas. Um anúncio bem elaborado não só atrai mais
+                                        atenção do público, como também aumenta as chances de conversão. Detalhes como a
+                                        escolha das imagens, a clareza das descrições e o uso correto de palavras-chave
+                                        desempenham um papel fundamental no desempenho dos seus anúncios.</div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>
+                            <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Crie e edite a sua Marca d'água na TF RP
+                                    </div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Em nosso sistema você tem a opção
+                                        de
+                                        criar e personalizar sua marca d'água, podendo adicionar textos, imagens e
+                                        diferentes itens.</div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>
+                            <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Criação instantânea de Anúncios via Link
+                                    </div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Na aba Anúncios, com o nosso
+                                        sistema
+                                        você consegue importar anúncios diretamente da internet, uma funcionalidade
+                                        exclusiva que oferece vantagens únicas para otimizar sua operação.</div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>
+                            <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Sincronize seus Anúncios na TF ERP</div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Ao sincronizar seus anúncios, você
+                                        pode importar todas as informações do marketplace para o ERP, como dados de
+                                        vendas e
+                                        logística referentes a cada anúncio.
+                                    </div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>
+                            <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Migre Anúncios na TF ERP</div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Na TF ERP você pode migrar os seus
+                                        anúncios entre marketplaces, facilitando sua gestão e economizando tempo,
+                                        evitando
+                                        que você perca horas cadastrando anuncios de maneira manual em seus canais de
+                                        venda.
+                                    </div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>
+                            <div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">Crie Anúncios na TF ERP</div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">Em nosso sistema, você pode criar
+                                        novos anúncios, com a possibilidade de personalização completa para atender às
+                                        suas
+                                        necessidades.
+                                    </div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div> -->
+                        </div>
+                        <div class="pagination-2">
+                            <div class="container">
+                                <div class="d-flex justify-content-center">
+                                    <ul class="menu-list-left" id="pages">
+                                        <!-- <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#" class="active">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li>...</li>
+                                        <li><a href="#">10</a></li>
+                                        <li><a href="#"><i class="bi bi-chevron-right"></i></a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+        <div id="messageContainer"
+            class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+        </div>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/language.js"></script>
+        <script src="assets/js/axios.js"></script>
+
+        <script>
+            const queryString = window.location.search; // 获取查询字符串（?name=John&age=30）
+            const urlParams = new URLSearchParams(queryString);
+            let cid = urlParams.get('cid') || ''
+            let page = 1
+            let pageCount = 0
+            post('/website/help/get_category').then(res => {
+                if (res.success) {
+                    const itemContent = document.querySelector('.menu-list-left')
+                    let innerHTML = ''
+                    res.data.items.forEach(item => {
+                        innerHTML += `<div class="menu-list-item steps-item" onclick="changeCategory('${item.id}')">
+                            <div data-lang="Logística">
+                                ${item.name}
+                            </div>
+                            <img src="assets/svg/Chevron-right.svg" alt="">
+                        </div>`
+                    });
+                    itemContent.innerHTML = innerHTML
+                    if (!cid) {
+                        cid = res.data.items[0].id
+                    }
+                    getList()
+                }
+            })
+            function getList(searchPage = 1) {
+                if (searchPage) page = searchPage
+                post('/tf/website/help/get_list', {
+                    keyword: '',
+                    page,
+                    cid
+                }).then(res => {
+                    if (res.success) {
+                        const cidList = document.getElementById('cidList')
+                        let innerHTML = ''
+                        res.data.data.forEach(item => {
+                            innerHTML += `<div class="menu-list-item steps-item"
+                                onclick="window.location.href='Tutoriais-details.html?id=${item.id}'">
+                                <div>
+                                    <div class="fs-16px blue-90 fw-500 lh-120">${item.subject}
+                                    </div>
+                                    <div class="W768 ellipsis fs-16px blue-65 lh-120">${item.date}</div>
+                                </div>
+                                <img class="ml-16px" src="assets/svg/Chevron-right.svg" alt="">
+                            </div>`
+                        })
+                        cidList.innerHTML = innerHTML
+
+                        //渲染分页
+                        const pages = document.getElementById('pages')
+                        let lis = '<li onclick="reducePage()"><a ><i class="bi bi-chevron-left"></i></a></li>'
+                        pageCount = res.data.pageCount
+                        if (res.data.pageCount > 9) {
+                            console.log(page)
+                            if (page < 5) {
+                                for (let index = 1; index < 6; index++) {
+                                    if (page == index) lis += `<li onclick='getList(${index})'><a  class="active">${index}</a></li>`
+                                    else lis += `<li onclick='getList(${index})'><a >${index}</a></li>`
+                                }
+                                lis += `<li>...</li><li onclick='getList(${res.data.pageCount})'><a >${res.data.pageCount}</a></li>`
+                            } else if (page > 4 && page < res.data.pageCount - 3) {
+                                console.log(page)
+                                lis += `<li onclick='getList(1)'><a >1</a></li><li>...</li>`
+                                for (let index = page - 2; index < page + 3; index++) {
+                                    console.log(index)
+                                    if (page == index) lis += `<li onclick='getList(${index})'><a  class="active">${index}</a></li>`
+                                    else lis += `<li onclick='getList(${index})'><a  >${index}</a></li>`
+                                }
+                                lis += `<li>...</li><li onclick='getList(${res.data.pageCount})'><a >${res.data.pageCount}</a></li>`
+                            } else {
+                                lis += `<li onclick='getList(1)'><a>1</a></li><li>...</li>`
+                                for (let index = res.data.pageCount - 4; index <= res.data.pageCount; index++) {
+                                    if (page == index) lis += `<li onclick='getList(${index})'><a  class="active">${index}</a></li>`
+                                    else lis += `<li onclick='getList(${index})'><a >${index}</a></li>`
+                                }
+
+                            }
+                        } else {
+                            for (let index = 1; index <= res.data.pageCount; index++) {
+                                if (page == index) lis += `<li onclick='getList(${index})'><a  class="active">${index}</a></li>`
+                                else lis += `<li onclick='getList(${index})'><a >${index}</a></li>`
+                            }
+                        }
+                        lis += '<li onclick="addPage()"><a i class="bi bi-chevron-right"></i></a></li>'
+                        pages.innerHTML = lis
+                    }
+                })
+            }
+            function reducePage() {
+                page--
+                if (page <= 0) {
+                    page = 1
+                }
+                getList()
+            }
+            function addPage() {
+                page++
+                if (page > pageCount) {
+                    page = pageCount
+                }
+                getList(page)
+            }
+            function search() {
+                const keyword = document.getElementById('searchInput').value
+                if (keyword) window.location.href = `busca.html?keyword=${keyword}`
+                else window.location.href = `busca.html`
+            }
+            function changeCategory(id) {
+                cid = id
+                page = 1
+                getList()
+            }
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+body {
+    background-color: #DEDFE4;
+}
+
+.container {
+    padding: 0px !important;
+}
+
+.container-content {
+    padding: 64px 80px;
+}
+
+.download-tip,
+.download-header {
+    background-color: #F5F4F4;
+}
+
+.download-header .container-content {
+    padding: 112px 160px 64px;
+    background-color: #F5F4F4;
+}
+
+.download-banner .container-content {
+    background-color: #DEDFE4;
+}
+
+.download-banner .row {
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.download-banner .row>* {
+    padding: 0;
+}
+
+.download-banner-card {
+    border-radius: 16px;
+    flex: 1;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.download-banner-card>img {
+    width: 100%;
+}
+
+.download-banner-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    height: 240px;
+
+}
+
+.download-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #0325B6;
+}
+
+.download-tip .container-content {
+    background-color: #F5F4F4;
+}
+
+.download-tip .container-content .btn {
+    background-color: #0325B6;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+    }
+
+    .container-content {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .download-tip .container-content .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .download-banner .row {
+        display: block !important;
+    }
+
+    .download-banner-card {
+        margin-bottom: 20px;
+    }
+}

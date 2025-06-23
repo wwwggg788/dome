@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-lang="Cadastro">Cadastro</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/tferp.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/register.css" rel="stylesheet">
+</head>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+
+<body class="index-page">
+    <header id="header" style="background-color: #fff;" class="header d-flex align-items-center fixed-top">
+        <div id="header-box" class="container-xl">
+            <div id="header-content"
+                class="header-content container-fluid  position-relative d-flex align-items-center ">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="assets/img/logo.png" alt=""><span class="fs-18px blue-90">&nbsp;·
+                        &nbsp;&nbsp;<span data-lang="Cadastro">Cadastro</span></span>
+                </a>
+                </a>
+                <div class="nav-list" id="nav-list">
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Selecione o seu idioma">Selecione o seu idioma</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a class="dropdown-button lang-btn" data-lang="pt-br">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/pt-br.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Português (PT-BR)">
+                                                        Português (PT-BR)</div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-button lang-btn" data-lang="zh">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/zh.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="中文 - 简体 (CN)">中文 - 简体
+                                                        (CN)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="en">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/en.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="English (US)">English
+                                                        (US)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="es">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/es.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Español (ES)">Español
+                                                        (ES)
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-button">
+                    <img id="list-bold" class="list-bold" src="assets/svg/list-bold.svg" alt="">
+                    <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <div class="container cadastro">
+            <div class="container-content">
+                <div class="step1">
+                    <div class="cadastro-page">
+                        <div class="cadastro-caption">
+                            <div class="ml-5px mb-12px blue fs-13px link" onclick="goBack()"><img
+                                    src="assets/svg/Arrow-left.svg" alt=""> <span data-lang="Voltar">Voltar</span>
+                            </div>
+                            <div class="fs-61px blue-90 fw-900 Poppins" data-lang="Vamos começar?">Vamos começar?</div>
+                        </div>
+                        <div class="cadastro-content">
+                            <div class="cadastro-form">
+                                <div class="blue-90 fs-31px mb-24px fw-500 Poppins" data-lang="Preencha seus dados">
+                                    Preencha
+                                    seus dados</div>
+                                <a class="btn " onclick="getUrl"><img src="assets/svg/Google.svg" alt=""> <span
+                                        data-lang="Entrar com o Google">Entrar com o Google</span></a>
+                                <div class="text-with-lines">
+                                    <div class="line"></div>
+                                    <div class="text" data-lang="ou digite suas informações">ou digite suas informações
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="blue-90 fs-16px lh-120 fw-300 mb-5px" data-lang="Nome completo *">Nome
+                                    completo *</div>
+                                <input class="input" type="text" data-lang="Digite seu nome completo"
+                                    placeholder="Digite seu nome completo" id="nameInput">
+                                <div class="blue-90 fs-16px lh-120 fw-300 mb-5px" data-lang="E-mail *">E-mail *</div>
+                                <input class="input" id="emailInput" type="text"
+                                    placeholder="Use o formato nome@exemplo.com"
+                                    data-lang="Use o formato nome@exemplo.com">
+                                <div class="blue-90 fs-16px lh-120 fw-300 mb-5px" id="Celular" data-lang="Celular *">
+                                    Celular *</div>
+                                <div class="input select-input">
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="selectHeader">
+                                            <span>请选择...</span>
+                                            <div></div>
+                                        </div>
+                                        <div class="select-items select-hide" id="selectItems">
+                                            <div data-value="1">
+                                                <img src="assets/svg/pt-br.svg" alt="BR" class="option-image">
+                                                <span>BR</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" placeholder="(11) 00000.0000" id="phoneInput">
+                                </div>
+                                <div class="blue-90 fs-16px lh-120 fw-300 mb-5px" data-lang="Versão">
+                                    Versão</div>
+                                <select id="Version" class="inputStyle input select">
+                                    <option value="3.0" selected>TF ERP 3.0</option>
+                                    <option value="2.0">TF ERP 2.0</option>
+                                </select>
+                                <!-- <div class="blue-90 fs-16px lh-120 fw-300 mb-5px" data-lang="CNPJ(Opcional)">
+                                    CNPJ(Opcional)</div>
+                                <input class="input" type="text" id="CNPJ" data-lang="Ex.: 00.000.000/0001-00"
+                                placeholder="Ex.: 00.000.000/0001-00"> -->
+                                <a class="btn continuar-submit" id="continuarBtn" data-lang="Continuar">Continuar</a>
+                            </div>
+                            <!-- <div class="createBtn" id="createBtn" data-lang="Criar uma senha">Criar uma senha</div> -->
+                            <div class="text-center mb-24px fs-16px mt-20px"><span data-lang="Já tem cadastro?"
+                                    class="mr-5px">Já tem
+                                    cadastro?</span><a class="defautl-color" href="login.html"
+                                    data-lang="Entrar agora">Entrar agora</a></div>
+                            <!-- <div class="text-left fs-13px"
+                                data-lang="Ao prosseguir você concorda com os termos de uso e a política de proteção de dados da TF Software LTDA.">
+                                Ao prosseguir você concorda com os <a href="">termos de uso</a> e a <a href="">política
+                                    de
+                                    proteção de
+                                    dados</a> da TF
+                                Software LTDA.
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="step2">
+                    <div class="cadastro-page">
+                        <div class="cadastro-caption">
+                            <div class="ml-5px mb-12px blue fs-13px link" onclick="returnUp('step2')"><img
+                                    src="assets/svg/Arrow-left.svg" alt=""><span data-lang="Voltar">Voltar</span>
+                            </div>
+                            <div class="fs-61px blue-90 fw-900 mb-12px Poppins" data-lang="Crie sua senha.">Crie sua
+                                senha.
+                            </div>
+                            <div class="blue-65 fs-20px lh-120"
+                                data-lang="Ela será usada para entra na sua conta com segurança.">Ela será usada para
+                                entra na sua conta com segurança.
+                            </div>
+                        </div>
+                        <div class="checkPassword">
+                            <div class="password-head">
+                                <div class="fs-20px blue-90 fw-500 " data-lang="Seus dados">Seus dados</div>
+                                <a class="fs-16px blue" data-lang="Alterar" onclick="Alterar()">Alterar</a>
+                            </div>
+                            <div class="password-from">
+                                <div class="blue-90 fw-500 fs-31px mb-24px Poppins"
+                                    data-lang="Digite e confirme sua senha">
+                                    Digite e confirme sua senha</div>
+                                <div class="mb-12px fs-16px fw-300" style="color: rgba(5, 26, 124, 0.90);"
+                                    data-lang="Senha">Senha</div>
+                                <div class="form-group">
+                                    <div class="password-input-wrapper">
+                                        <input type="password" id="password" class="password-input"
+                                            placeholder="Digite sua senha" data-lang="Digite sua senha">
+                                        <span class="toggle-password" id="togglePassword">
+                                            <span class="eye-slash-icon"></span>
+                                        </span>
+                                    </div>
+
+                                    <div class="strength-container">
+                                        <div class="strength-meter">
+                                            <div class="strength-bar" id="strengthBar" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="password-criteria">
+                                    <h4 class="criteria-title" data-lang="Deve conter pelo menos;">Deve conter pelo
+                                        menos;</h4>
+                                    <ul class="criteria-list">
+                                        <li class="criteria-item">
+                                            <span class="criteria-icon criteria-icon-valid" id="criteriaLength"></span>
+                                            <span data-lang="Pelo menos 8 caracteres">Pelo menos 8 caracteres</span>
+                                        </li>
+                                        <li class="criteria-item">
+                                            <span class="criteria-icon criteria-icon-valid"
+                                                id="criteriaUppercase"></span>
+                                            <span data-lang="Pelo menos 1 letra maiúscula">Pelo menos 1 letra
+                                                maiúscula</span>
+                                        </li>
+                                        <li class="criteria-item">
+                                            <span class="criteria-icon criteria-icon-valid" id="criteriaNumber"></span>
+                                            <span data-lang="Pelo menos 1 número">Pelo menos 1 número</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-12px fs-16px fw-300" style="color: rgba(5, 26, 124, 0.90);"
+                                    data-lang="Confirme sua senha">Confirme sua
+                                    senha</div>
+                                <div class="password-again">
+                                    <input type="password" class="input password-input" id="password-again"
+                                        placeholder="Digite sua senha" data-lang="Digite sua senha">
+                                    <button type="button" id="toggleButton" class="toggle-button">
+                                        <img id="icon" src="assets/svg/eye.svg"></img>
+                                    </button>
+                                    <div id="errorInfo" class="error-info"><img class="mr-5px"
+                                            src="assets/svg/warning-circle.svg" alt=""><span id="errMsg"></span>
+                                    </div>
+                                </div>
+                                <a class="btn continuar-submit" id="confirmar-cadastro"
+                                    data-lang="Confirmar cadastro">Confirmar cadastro</a>
+
+                            </div>
+                            <div class="text-center mb-24px fs-16px"><span data-lang="Já tem cadastro?">Já tem
+                                    cadastro?</span> <a class="defautl-color" href="" data-lang="Entrar agora">Entrar
+                                    agora</a></div>
+                            <!-- <div class="text-left fs-13px">
+                                Ao prosseguir você concorda com os <a href="">termos de uso</a> e a <a href="">política
+                                    de
+                                    proteção de
+                                    dados</a> da TF
+                                Software LTDA.
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="step3">
+                    <div class="cadastro-page">
+                        <div class="cadastro-caption">
+                            <div class=" mb-12px blue fs-13px link" style="color: #127753;"><img class="mr-5px"
+                                    src="assets/svg/check-circle-fill.svg" alt=""><span
+                                    data-lang="Cadastro realizado com sucesso!">Cadastro realizado com sucesso!</span>
+                            </div>
+                            <div class="fs-61px blue-90 fw-900 mb-12px Poppins" data-lang="Só mais um passo.">Só mais um
+                                passo.
+                            </div>
+                        </div>
+                        <div class="verification-code">
+                            <div class="fs-31px blue-90 fw-500 mb-12px" data-lang="Digite o código">Digite o código
+                            </div>
+                            <div class="fs-16px fw-300 lh-120 blue-65" id="phone">
+                                Para sua segurança e ativação do cadastro, insira
+                                o
+                                código enviado por SMS para o número que termina em 9999.</div>
+                            <div>
+                                <form class="verification-form">
+                                    <table class="verify-table">
+                                        <tr>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                            <td class="verify-cell"><input type="text" maxlength="1"
+                                                    class="verify-input" oninput="focusNext(this)"
+                                                    onkeyup="handleBackspace(this)"></td>
+                                        </tr>
+                                    </table>
+                                    <div class="fs-16px blue link " onclick="colar()"><img
+                                            style="width: 16px; margin-right: 5px;" src="assets/svg/clipboard-text.svg"
+                                            alt=""><span data-lang="Colar">Colar</span>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="fs-16px blue lh-120 c-pointer" id="sendCodeBtn" onclick="sendCode()">
+                                <span data-lang="Reenviar código">Reenviar código</span> <span id="countdownTimer"
+                                    style="display: none;">(60)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="step4">
+                    <div class="cadastro-page">
+                        <div class="cadastro-caption">
+                            <div class=" mb-12px blue fs-13px link" style="color: #127753;"><img class="mr-5px"
+                                    src="assets/svg/check-circle-fill.svg" alt="">Cadastro realizado com
+                                sucesso!
+                            </div>
+                            <div class="fs-61px blue-90 fw-900 mb-12px Poppins" data-lang="Só mais um passo.">Só mais um
+                                passo.
+                            </div>
+                        </div>
+                        <div class="verification-code">
+                            <div class="fs-31px fw-500 blue-90 mb-12px" data-lang="Código verificado!">Código
+                                verificado!</div>
+                            <div class="fs-16px fw-300" style="color: #127753;" data-lang="Redirecionando...">
+                                Redirecionando...</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footerText">
+                    <div class="mb-5px"
+                        data-lang="TF SOFTWARE © Todos os direitos reservados. CNPJ: 40.673.061/0001-34 - 2025">TF
+                        SOFTWARE © Todos os direitos reservados. CNPJ: 40.673.061/0001-34 -
+                        2025
+                    </div>
+                    <div data-lang="Política de privacidade・Termos e condições">Política de privacidade • Termos e
+                        condições</div>
+                </div>
+            </div>
+        </div>
+        <div id="messageContainer"
+            class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+        </div>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <!-- <script src="assets/js/language.js"></script> -->
+        <script src="assets/js/passWord.js"></script>
+        <script src="assets/js/axios.js"></script>
+
+</body>
+<script>
+    let userId = ''
+    let ip = ''
+    document.addEventListener('DOMContentLoaded', function () {
+        const emailInput = document.getElementById('emailInput');
+        const nameInput = document.getElementById('nameInput');
+        const phoneInput = document.getElementById('phoneInput');
+        const continuarBtn = document.getElementById('continuarBtn');
+        // const createBtn = document.getElementById('createBtn');
+        const passwordInput = document.getElementById('password')
+        const passwordAgainInput = document.getElementById('password-again')
+        const confirmarCadastro = document.getElementById('confirmar-cadastro')
+        //密码进度条
+        const strengthBar = document.getElementById('strengthBar')
+        //下拉框
+        const version = document.getElementById('Version')
+        updateStatus();
+        emailInput.addEventListener('input', updateStatus);
+        nameInput.addEventListener('input', updateStatus);
+        phoneInput.addEventListener('input', updateStatus);
+        function updateStatus() {
+            const email = emailInput.value.trim().length > 0;
+            const name = nameInput.value.trim().length > 0;
+            const phone = phoneInput.value.trim().length > 0;
+            if (email && name && phone) {
+                // 密码已输入
+                continuarBtn.style.backgroundColor = '#0325B6'
+                // createBtn.style.backgroundColor = '#0325B6'
+                continuarBtn.style.pointerEvents = 'unset'
+                // createBtn.style.pointerEvents = 'unset'
+
+            } else {
+                continuarBtn.style.backgroundColor = '#DDDFE8'
+                // createBtn.style.backgroundColor = '#DDDFE8'
+                continuarBtn.style.pointerEvents = 'none'
+                // createBtn.style.pointerEvents = 'none'
+            }
+        }
+        continuarBtn.addEventListener('click', () => {
+            const step1 = document.querySelector('.step1')
+            const step2 = document.querySelector('.step2')
+            step1.style.display = 'none'
+            step2.style.display = 'block'
+            const errorInfo = document.getElementById('errorInfo')
+            errorInfo.style.display = 'none'
+        })
+        confirmarCadastro.addEventListener('click', () => {
+            post('/tf/user/create', {
+                affId: '',
+                from: '',
+                ip: '',
+                userName: nameInput.value,
+                tel: phoneInput.value,
+                email: emailInput.value,
+                password: passwordInput.value,
+            }).then(res => {
+                if (res.success) {
+                    const { user_id, tel } = res.data
+                    userId = user_id
+                    const step2 = document.querySelector('.step2')
+                    const step3 = document.querySelector('.step3')
+                    step2.style.display = 'none'
+                    step3.style.display = 'block'
+                    const params = new URLSearchParams(window.location.search);
+                    const lang = params.get('lang') || localStorage.getItem('tf-lang') || 'pt';
+                    let innerText = ''
+                    if (lang == 'pt') innerText = `Para sua segurança e ativação do cadastro, insira o código enviado por SMS para o número que termina em ${tel}.`
+                    else if (lang == 'zh') innerText = `为确保安全并激活账户，请输入发送至尾号为 ${tel} 的手机号的验证码。`
+                    else if (lang == 'es') innerText = `Para tu seguridad y activación del registro, introduce el código enviado por SMS al número que termina en ${tel}.`
+                    else if (lang == 'us') innerText = `For your security and to activate your registration, enter the code sent by SMS to the number ending in ${tel}.`
+                } else {
+                    const errorInfo = document.getElementById('errorInfo')
+                    const errMsg = document.getElementById('errMsg')
+                    errMsg.innerText = res.message.replace('_', '')
+                    errorInfo.style.display = 'flex'
+                    $message.error(res.message.replace('_', ''))
+                }
+            })
+        })
+
+        const toggleButton = document.getElementById('toggleButton')
+        toggleButton.addEventListener('click', function () {
+            if (passwordAgainInput.type === 'password') {
+                passwordAgainInput.type = 'text';
+                toggleButton.firstElementChild.src = 'assets/svg/eye-slash.svg'
+            } else {
+                passwordAgainInput.type = 'password';
+                toggleButton.firstElementChild.src = 'assets/svg/eye.svg'
+            }
+        });
+
+        /// 再次确认按钮
+        passwordInput.addEventListener('input', () => showBtn())
+        passwordAgainInput.addEventListener('input', () => showBtn())
+        function showBtn() {
+            const passwordValue = passwordInput.value
+            const passwordAgainValue = passwordAgainInput.value
+            if (passwordValue && passwordAgainValue && passwordValue === passwordAgainValue && strengthBar.style.width == '100%') {
+                confirmarCadastro.style.backgroundColor = '#0325B6'
+                confirmarCadastro.style.pointerEvents = 'unset'
+
+            } else {
+                confirmarCadastro.style.backgroundColor = '#DDDFE8'
+                confirmarCadastro.style.pointerEvents = 'none'
+
+            }
+        }
+        //下拉框change失去焦点
+        version.addEventListener('change', function () {
+            version.blur()
+        })
+    });
+    //验证码
+    function focusNext(input) {
+        if (input.value) {
+            const inputs = document.querySelectorAll('.verify-input');
+            const index = Array.from(inputs).indexOf(input);
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+            setTimeout(() => {
+                checkCompletion();
+            }, 500);
+        }
+    }
+    // 处理退格键
+    function handleBackspace(input) {
+        if (event.key === 'Backspace' && !input.value) {
+            const inputs = document.querySelectorAll('.verify-input');
+            const index = Array.from(inputs).indexOf(input);
+            if (index > 0) {
+                inputs[index - 1].focus();
+            }
+        }
+    }
+
+    // 检查是否完成输入
+    function checkCompletion() {
+        const inputs = document.querySelectorAll('.verify-input');
+        const isComplete = Array.from(inputs).every(input => input.value);
+        if (isComplete) {
+            const inputs = document.querySelectorAll('.verify-input');
+            const code = Array.from(inputs).map(input => input.value).join('');
+            // alert(`您输入的验证码是: ${code}`);
+            post('/tf/user/activate', {
+                user_id: userId,
+                verifyCode: code
+            }).then(res => {
+                if (res.success) {
+                    const step3 = document.querySelector('.step3')
+                    const step4 = document.querySelector('.step4')
+                    step3.style.display = 'none'
+                    step4.style.display = 'block'
+                } else {
+                    $message.error(res.message.replace('_', ''))
+                }
+            })
+
+        }
+    }
+
+    //提交按钮
+    // document.querySelector('.login-submit').addEventListener('click', () => {
+    //     //登录表单
+    //     const loginForm = document.querySelector('.login-form')
+    //     //验证码表单
+    //     const verification = document.querySelector('.verification')
+    //     verification.style.display = 'block'
+    //     loginForm.style.display = 'none'
+    // })
+
+
+    // 获取DOM元素
+    const selectHeader = document.getElementById('selectHeader');
+    const selectItems = document.getElementById('selectItems');
+    const options = selectItems.querySelectorAll('div');
+
+    // 设置默认选中第一个选项
+    if (options.length > 0) {
+        const firstOption = options[0];
+        const image = firstOption.querySelector('img').src;
+        const text = firstOption.querySelector('span').textContent;
+
+        selectHeader.innerHTML = `
+        <div style="display: flex; align-items: center;">
+          <img src="${image}" alt="${text}" class="selected-image">
+          <span>${text}</span>
+        </div>
+        <div></div>
+      `;
+
+        firstOption.classList.add('same-as-selected');
+    }
+
+    // 切换下拉列表显示状态
+    selectHeader.addEventListener('click', function (e) {
+        e.stopPropagation();
+        selectItems.classList.toggle('select-hide');
+        selectHeader.classList.toggle('select-arrow-active');
+    });
+
+    // 点击选项处理
+    options.forEach(option => {
+        option.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            // 获取选项中的图文信息
+            const image = this.querySelector('img').src;
+            const text = this.querySelector('span').textContent;
+
+            // 更新选中项显示
+            selectHeader.innerHTML = `
+          <div style="display: flex; align-items: center;">
+            <img src="${image}" alt="${text}" class="selected-image">
+            <span>${text}</span>
+          </div>
+          <div></div>
+        `;
+
+            // 隐藏下拉列表
+            selectItems.classList.add('select-hide');
+            selectHeader.classList.remove('select-arrow-active');
+
+            // 移除之前的选中状态
+            options.forEach(opt => opt.classList.remove('same-as-selected'));
+            // 添加新的选中状态
+            this.classList.add('same-as-selected');
+        });
+    });
+
+    // 点击外部关闭下拉列表
+    document.addEventListener('click', function () {
+        selectItems.classList.add('select-hide');
+        selectHeader.classList.remove('select-arrow-active');
+    });
+
+    //Alterar 返回填写资料
+    function Alterar() {
+        const step1 = document.querySelector('.step1')
+        const step2 = document.querySelector('.step2')
+        step1.style.display = 'block'
+        step2.style.display = 'none'
+    }
+
+    const colar = async () => {
+        const text = await navigator.clipboard.readText();
+        if (text) {
+            const tds = document.querySelectorAll('td')
+            text.split('').forEach((item, index) => {
+                if (index > 5) return
+                tds[index].firstElementChild.value = item
+            })
+            setTimeout(() => {
+                checkCompletion()
+            }, 500);
+
+        }
+    }
+
+    //发送验证码按钮
+    const sendCodeBtn = document.getElementById('sendCodeBtn')
+    let countdown = 60
+    let isDisabled = false //是否禁止点击
+    //发送验证码
+    function sendCode() {
+        if (isDisabled) return
+        isDisabled = true
+        sendCodeBtn.style.opacity = 0.5
+        post('/tf/user/send_email_verify_code', {
+            user_id: userId,
+            type: 'register',
+            ip: ''
+        }).then(res => {
+            if (res.success) {
+                //开启倒计时
+                startCountdown()
+            } else {
+                isDisabled = false
+                sendCodeBtn.style.opacity = 1
+                $message.error(res.message.replace('_', ''))
+            }
+        })
+    }
+    //开启倒计时
+    function startCountdown() {
+
+        countdownTimer.style.display = 'inline-block'
+        countdownInterval = setInterval(() => {
+            countdown--;
+            countdownTimer.textContent = '(' + countdown + ')';
+            if (countdown <= 0) {
+                resetCountdown();
+            }
+        }, 1000);
+    }
+    //重置倒计时
+    function resetCountdown() {
+        clearInterval(countdownInterval);
+        countdown = 60;
+        isDisabled = false
+        sendCodeBtn.style.opacity = 1
+        countdownTimer.textContent = '(60)';
+        countdownTimer.style.display = 'none'
+    }
+
+    //返回上一步
+    function returnUp(step) {
+        const step1 = document.querySelector('.step1');
+        const step2 = document.querySelector('.step2');
+        const step3 = document.querySelector('.step3');
+
+        if (step === 'step2') {
+            step2.style.display = 'none';
+            step1.style.display = 'block';
+        } else if (step === 'step3') {
+            step3.style.display = 'none';
+            step2.style.display = 'block';
+        }
+    }
+    function getUrl() {
+        post('/tf/user/google/auth/url').then(res => {
+            if (res.success) {
+                window.open(res.authUrl)
+            } else {
+                $message.error(res.message.replace('_', ''))
+            }
+        })
+    }
+
+</script>
+
+</html>

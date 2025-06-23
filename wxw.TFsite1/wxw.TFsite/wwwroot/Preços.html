@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-lang="Preços">Preços</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/tferp.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style type="text/tailwindcss">
+    @layer utilities {
+      .message-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      .message-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-exit {
+        opacity: 1;
+      }
+      .message-exit-active {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 300ms, transform 300ms;
+      }
+      .message-container {
+        pointer-events: none;
+      }
+    }
+  </style>
+
+<body class="index-page">
+
+    <header id="header" style="background-color: #fff;" class="header d-flex align-items-center fixed-top">
+        <div id="header-box" class="container-xl">
+            <div id="header-content"
+                class="header-content container-fluid  position-relative d-flex align-items-center ">
+                <a href="index.html" class="logo d-flex align-items-center ">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+                <div class="nav-list" id="nav-list">
+                    <nav id="navmenu" class="navmenu me-auto">
+                        <ul>
+                            <li class="dropdown"><a><span data-lang="Para quem">Para quem?</span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="nav-card">
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90"
+                                                    data-lang="Para seu negócio que vende">Para seu negócio que
+                                                    vende</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="pedidos-3K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 3 mil pedidos/mês">Até 3 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px "
+                                                                data-lang="Empresas que vendem até 100 pedidos por dia.">
+                                                                Empresas que vendem até 100 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-9K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 9 mil pedidos/mês">Até 9 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px gs-13px"
+                                                                data-lang="Empresas que vendem até 300 pedidos por dia.">
+                                                                Empresas que vendem até 300
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-15K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até 15 mil pedidos/mês">Até 15 mil
+                                                                pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até 500 pedidos por dia.">
+                                                                Empresas que vendem até 500 pedidos por dia.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="pedidos-30K.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/package.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Até ou + de 30 mil pedidos/mês">Até ou + de
+                                                                30 mil pedidos/mês</div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Empresas que vendem até ou mais de 1.000 pedidos por dia.">
+                                                                Empresas que
+                                                                vendem até ou mais de 1.000
+                                                                pedidos por
+                                                                dia.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-card-item">
+                                                <div class="fs-20px lh-120 blue-90" data-lang="Calcule suas taxas">
+                                                    Calcule suas taxas</div>
+                                                <div class="dropdown-buttons">
+                                                    <a href="simulador.html" class="dropdown-button">
+                                                        <div class="dropdown-button-svg">
+                                                            <img src="assets/svg/calculator.svg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <div class="blue-90 mb-5px fs-16px"
+                                                                data-lang="Simulador de preço">Simulador de preço
+                                                            </div>
+                                                            <div class="blue-65 fs-13px"
+                                                                data-lang="Calcule seu preço final de um jeito fácil com uma calculadora de vendas">
+                                                                Calcule seu preço final de um jeito fácil com
+                                                                uma
+                                                                calculadora de vendas.</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="blue-90 fs-13px" data-lang="Todas as funcionalidades">Todas as
+                                            funcionalidades <img src="assets/svg/arrow-up-right.svg" alt="">
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="Preços.html" data-lang="Preços">Preços</a></li>
+                            <li><a href="blog.html" data-lang="Blog">Blog</a></li>
+                            <li class="dropdown"><a><span data-lang="Soluções">Soluções</span> <img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Para seu negócio que vende">Para seu negócio que vende</div>
+                                        </div>
+                                        <div class="dropdown-cards">
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tffiscal.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Fiscal">TF Fiscal <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Emita notas fiscais com facilidade.">Emita notas fiscais
+                                                    com facilidade.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tftalk.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Talk">TF Talk <img
+                                                        class="f-r" src="assets/svg/arrow-up-right.svg" alt="">
+                                                </div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Responda seu clientes com inteligência artificial (IA).">
+                                                    Responda seu clientes com inteligência artificial (IA).</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfwms.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF WMS">TF WMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Gerencie seu estoque em tempo real.">Gerencie seu
+                                                    estoque em tempo real.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-tfshop.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF Shop">TF Shop</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Compre e venda on-line sem se preocupar com estoque.">
+                                                    Compre e venda on-line sem se preocupar com estoque.</div>
+                                            </div>
+                                            <div class="dropdown-card">
+                                                <img class="mb-24px" src="assets/svg/Icon-order.svg" alt="">
+                                                <div class="mb-5px fs-16px blue-90" data-lang="TF OMS">TF OMS</div>
+                                                <div class="fs-13px blue-65"
+                                                    data-lang="Lorem ipsum dolor sit amet consectetur. Quis venenatis.">
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur. Quis venenatis.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="about.html" data-lang="Sobre nós">Sobre nós</a></li>
+                        </ul>
+                        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+                    </nav>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown nav-help"><a><span data-lang="Ajuda">Ajuda</span><img class="ml-5px"
+                                        src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div>Para tirar dúvidas</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px"
+                                                        data-lang="Suporte e atendimento">Suporte e atendimento
+                                                    </div>
+                                                    <div class="blue-65 fs-13px ">(11) 97998.7003
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="help.html" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/question.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Central de ajuda">
+                                                        Central de ajuda</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-button">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/whatsapp-logo.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Comercial">Comercial
+                                                    </div>
+                                                    <div class="blue-65 fs-13px">(11) 96605.4427</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="btn-getstarted" href="login.html" data-lang="Entre ou cadastre-se">Entre ou
+                        cadastre-se</a>
+                    <nav id="navmenu" class="navmenu">
+                        <ul>
+                            <li class="dropdown"><a><span><img id="lang-icon" src="" alt=""></span>
+                                    <img class="ml-5px" src="assets/svg/caret-down-bold.svg" alt=""></a>
+                                <ul class="dropdown-ul">
+                                    <div class="dropdown-ul-items">
+                                        <div class="dropdown-title">
+                                            <div data-lang="Selecione o seu idioma">Selecione o seu idioma</div>
+                                        </div>
+                                        <div class="dropdown-buttons">
+                                            <a class="dropdown-button lang-btn" data-lang="pt-br">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/pt-br.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Português (PT-BR)">
+                                                        Português (PT-BR)</div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-button lang-btn" data-lang="zh">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/zh.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="中文 - 简体 (CN)">中文 - 简体
+                                                        (CN)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="en">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/en.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="English (US)">English
+                                                        (US)</div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="dropdown-button lang-btn" data-lang="es">
+                                                <div class="dropdown-button-svg">
+                                                    <img src="assets/svg/es.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="blue-90 mb-5px fs-16px" data-lang="Español (ES)">Español
+                                                        (ES)
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-button">
+                    <img id="list-bold" class="list-bold" src="assets/svg/list-bold.svg" alt="">
+                    <img id="x-bold" class="x-bold" src="assets/svg/x-bold.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+        body {
+            background-color: #F5F4F4;
+        }
+
+        .container {
+            padding: 0px !important;
+        }
+
+        .container-content {
+            background-color: #F5F4F4;
+            padding: 0 80px;
+        }
+
+        .btn {
+            color: var(--default-color);
+            background: #fff;
+            font-family: var(--heading-font);
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 12px 28px 12px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+        }
+
+        .price-header .container-content {
+            margin-top: 60px;
+            padding: 88px 160px;
+        }
+
+        .segmented {
+            display: flex;
+            justify-content: center;
+        }
+
+        .segmented-btn {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #DDDEE6;
+            padding: 3px;
+            height: unset;
+        }
+
+        .segmented-btn:hover {
+            background-color: #DDDEE6 !important;
+        }
+
+        .segmented-poa-btn {
+            padding: 11px 16px;
+            height: unset;
+            background-color: unset;
+        }
+
+        .segmented-poa-btn:hover {
+            color: #fff !important;
+        }
+
+        /* .segmented-poa-btn:hover .blue {
+            color: #fff !important;
+        } */
+
+        .checked-btn {
+            background-color: #fff;
+        }
+
+        .price-list {
+            position: sticky;
+            top: 72px;
+        }
+
+        .platform-icon img {
+            height: 32px;
+        }
+
+        .price-list .container-content {
+            padding: 40px 80px 64px;
+            display: flex;
+            gap: 16px;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-between; */
+        }
+
+        .price-list .container-content:last-child {
+            display: none;
+        }
+
+        .price-list .price-item {
+            flex: 1;
+            /* min-width: 200px; */
+            border-radius: 16px;
+            padding: 16px;
+            background-color: #fff;
+        }
+
+        .price-list .price-item .price-item-btn {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+            padding: 0;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background-color: #E6E8F0;
+        }
+
+        .price-item-tag {
+            font-size: 10px;
+            padding: 2px 4px;
+            background-color: #FBD356;
+            color: rgba(0, 6, 38, 0.90);
+            border-radius: 6px;
+        }
+
+
+
+        .price-list .special {
+            background-color: #2EF1FF;
+        }
+
+        .price-list .special .price-item-btn {
+            background-color: #0325B6;
+            color: #fff;
+        }
+
+        .price-plane .container-content {
+            padding: 64px 80px;
+        }
+
+        .price-plane-item {
+            border-top: 1px solid rgba(5, 26, 124, 0.90);
+        }
+
+        .price-plane-ul {
+            height: 40px;
+            border-bottom: 1px solid rgba(5, 26, 124, 0.10);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-plane-li {
+            width: 203px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clients .container-content {
+            padding: 64px 80px;
+        }
+
+        .ask-mode .container-content {
+            padding: 64px 80px;
+        }
+
+        .ask-item {
+            font-size: 16px;
+            background-color: #fff;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        .ask-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .ask-item-text {
+            width: 100%;
+            padding: 16px 24px;
+        }
+
+        .more-info .container-content {
+            padding: 64px 80px;
+        }
+
+        .item-center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <main class="main">
+        <div class="container price-header">
+            <div class="container-content">
+                <div class="blue fs-20px mb-12px fw-500 lh-120" data-lang="Planos e preços">Planos e preços</div>
+                <div class="blue-90 fs-61px mb-12px fw-900 Poppins"
+                    data-lang="COMECE GRÁTIS E ESCOLHA O PLANO IDEAL QUANDO QUISER.">Comece <span
+                        class="blue-90">grátis</span> e escolha o plano
+                    ideal quando quiser.</div>
+                <div class="blue-65 fs-20px" data-lang="Aproveite e teste sem precisar de cartão de crédito.">Aproveite
+                    e teste sem precisar de cartão de crédito.</div>
+            </div>
+        </div>
+        <div class="container segmented">
+            <div class="btn segmented-btn">
+                <div class="btn segmented-poa-btn fs-14px blue-90 mr-10px checked-btn" id="month" data-lang="Mensal">
+                    Mensal</div>
+                <div class="btn segmented-poa-btn fs-14px blue-90" id="year">
+                    <div class="fs-14px">
+                        <span data-lang="Anual">Anual</span>
+                        <span class="blue" data-lang="17% de descont">17% de desconto</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container price-list">
+            <div class="container-content" id="month-price">
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="Grátis">Grátis</div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Iniciante">Iniciante</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px"
+                        data-lang="Comece agora: conheça os principais recursos grátis.">Comece agora: conheça os
+                        principais recursos grátis.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Começar grátis">Começar grátis</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="3 Lojas integradas"><span
+                                class="blue-90">3</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="20 Pedidos por dia"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1 Usuários cadastrados""><span class=" blue-90">
+                            1</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="300 MB Espaço na nuvem"><span class="blue-90">300
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 99/mês">R$ 99<span
+                            class="fs-20px blue-65 fs-300">/mês</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Essencial">Essencial</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 100 pedidos/dia.">
+                        Empresas que vendem até 100 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="6 Lojas integradas"><span
+                                class="blue-90">6</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="100 Pedidos por dia"><span
+                                class="blue-90">100</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="2 Usuários cadastrados"><span
+                                class="blue-90">2</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="500 MB Espaço na nuvem"><span class="blue-90">500
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 199/mês">R$ 199<span
+                            class="fs-20px blue-65 fs-300">/mês</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Lojista">Lojista</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 300 pedidos/dia.">
+                        Empresas que vendem até 300 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="10 Lojas integradas"><span
+                                class="blue-90">10</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="300 Pedidos por dia"><span
+                                class="blue-90">300</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="10 Usuários cadastrados"><span
+                                class="blue-90">10</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="800 MB Espaço na nuvem"><span class="blue-90">800
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item special">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 299/mês">R$ 299<span
+                            class="fs-20px blue-65 fs-300">/mês</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px"><span data-lang="Empreendedor">Empreendedor</span> <span
+                            class="price-item-tag" data-lang="Mais popular">Mais popular</span>
+                    </div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 500 pedidos/dia">
+                        Empresas que vendem até 500 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="20 Lojas integradas"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="500 Pedidos por dia"><span
+                                class="blue-90">500</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="15 Usuários cadastrados"><span
+                                class="blue-90">15</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1 GB Espaço na nuvem"><span class="blue-90">1
+                                GB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 499/mês">R$ 499<span class=" fs-20px
+                        blue-65 fs-300">/mês</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Profissional">Profissional</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px"
+                        data-lang="Empresas que vendem até ou mais de 1.000 pedidos/dia.">Empresas que vendem até ou
+                        mais de 1.000 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="30 Lojas integradas"><span
+                                class="blue-90">30</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1.000 Pedidos por dia"><span
+                                class="blue-90">1.000</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="20 Usuários cadastrados"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1.5 GB Espaço na nuvem"><span class="blue-90">1.5
+                                GB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="Servidor PRO">Servidor PRO</div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Fale com a gente">Fale com a gente</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Para empresas com necessidades específicas.">
+                        Para empresas com necessidades específicas.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Entrar em contato">Entrar em contato</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="2.000 Lojas integradas"><span
+                                class="blue-90">2.000</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="Sem limites"><span class="blue-90">Sem limites</span>
+                        </div>
+                        <div class="fs-13px mb-12px" data-lang="50 Usuários cadastrados"><span
+                                class="blue-90">50</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px"><span class="blue-90" data-lang="Sem limites">Sem limites</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-content" id="year-price">
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="Grátis">Grátis</div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Iniciante">Iniciante</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px"
+                        data-lang="Comece agora: conheça os principais recursos grátis.">Comece agora: conheça os
+                        principais recursos grátis.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Começar grátis">Começar grátis</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="3 Lojas integradas"><span
+                                class="blue-90">3</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="20 Pedidos por dia"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1 Usuários cadastrados"><span
+                                class="blue-90">1</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="300 MB Espaço na nuvem"><span class="blue-90">300
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 990/mês">R$ 990<span
+                            class="fs-20px blue-65 fs-300">/ano</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Essencial">Essencial</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 100 pedidos/dia.">
+                        Empresas que vendem até 100 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="6 Lojas integradas"><span
+                                class="blue-90">6</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="100 Pedidos por dia"><span
+                                class="blue-90">100</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="2 Usuários cadastrados"><span
+                                class="blue-90">2</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="500 MB Espaço na nuvem"><span class="blue-90">500
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px">R$ 1999<span class="fs-20px blue-65 fs-300">/ano</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Lojista">Lojista</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 300 pedidos/dia">
+                        Empresas que vendem até 300 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="10 Lojas integradas"><span
+                                class="blue-90">10</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="300 Pedidos por dia"><span
+                                class="blue-90">300</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="10 Usuários cadastrados"><span
+                                class="blue-90">10</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="800 MB Espaço na nuvem"><span class="blue-90">800
+                                MB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item special">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 2999/ano">R$ 2999<span
+                            class="fs-20px blue-65 fs-300">/ano</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Empreendedor">Empreendedor <span
+                            class="price-item-tag">Mais popular</span>
+                    </div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Empresas que vendem até 500 pedidos/dia.">
+                        Empresas que vendem até 500 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="20 Lojas integradas"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="500 Pedidos por dia"><span
+                                class="blue-90">500</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="15 Usuários cadastrados"><span
+                                class="blue-90">15</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1 GB Espaço na nuvem"><span class="blue-90">1
+                                GB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="R$ 4999/ano">R$ 4999<span
+                            class="fs-20px blue-65 fs-300">/ano</span>
+                    </div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Profissional">Profissional</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px"
+                        data-lang="Empresas que vendem até ou mais de 1.000 pedidos/dia.">Empresas que vendem até ou
+                        mais de 1.000 pedidos/dia.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Escolher plano">Escolher plano</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="30 Lojas integradas"><span
+                                class="blue-90">30</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1.000 Pedidos por dia"><span
+                                class="blue-90">1.000</span>&nbsp;<span class="blue-65">Pedidos
+                                por
+                                dia</span></div>
+                        <div class="fs-13px mb-12px" data-lang="20 Usuários cadastrados"><span
+                                class="blue-90">20</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px" data-lang="1.5 GB Espaço na nuvem"><span class="blue-90">1.5
+                                GB</span>&nbsp;<span class="blue-65">Espaço
+                                na nuvem</span></div>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="fs-25px fw-500 blue-90 mb-8px" data-lang="Servidor PRO">Servidor PRO</div>
+                    <div class="fs-14px blue-90 mb-8px" data-lang="Fale com a gente">Fale com a gente</div>
+                    <div class="fs-12px blue-65 mb-8px mb-12px" data-lang="Para empresas com necessidades específicas.">
+                        Para empresas com necessidades específicas.
+                    </div>
+                    <div class="item-center mb-12px">
+                        <div class="btn price-item-btn blue-90" data-lang="Entrar em contato">Entrar em contato</div>
+                    </div>
+                    <div class="summarize">
+                        <div class="fs-13px mb-12px" data-lang="2.000 Lojas integradas"><span
+                                class="blue-90">2.000</span>&nbsp;<span class="blue-65">Lojas
+                                integradas</span></div>
+                        <div class="fs-13px mb-12px"><span class="blue-90" data-lang="Sem limites">Sem limites</span>
+                        </div>
+                        <div class="fs-13px mb-12px" data-lang="50 Usuários cadastrados"><span
+                                class="blue-90">50</span>&nbsp;<span class="blue-65">Usuários
+                                cadastrados</span></div>
+                        <div class="fs-13px mb-12px"><span class="blue-90" data-lang="Sem limites">Sem
+                                limites</span>/div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container price-plane">
+            <div class="container-content">
+                <div class="fs-49px mb-40px Poppins" data-lang="Compare os planos">Compare os planos</div>
+                <div class="price-plane-item">
+                    <div class="price-plane-ul">
+                        <div class="fs-20px blue-90" data-lang="Operação">Operação</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Cadastro de produtos e composições (KIT)">Cadastro de
+                            produtos e composições(KIT)</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Agendamento de upload de anúncios">Agendamento de upload
+                            de anúncios</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li">100</div>
+                        <div class="price-plane-li">300</div>
+                        <div class="price-plane-li">500</div>
+                        <div class="price-plane-li">800</div>
+                        <div class="price-plane-li">1.000</div>
+                        <div class="price-plane-li">10.000</div>
+                    </div>
+                </div>
+                <div class="price-plane-item">
+                    <div class="price-plane-ul">
+                        <div class="fs-20px blue-90" data-lang="Personalização">Personalização</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Logo personalizável no sistema">Logo personalizável no
+                            sistema</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="URL personalizada">URL personalizada</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Servidor dedicado">Servidor dedicado</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="price-plane-item">
+                    <div class="price-plane-ul">
+                        <div class="fs-20px blue-90" data-lang="Nota fiscal">Nota fiscal</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Automação exclusiva para NFe">Automação exclusiva para
+                            NFe
+                        </div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-error.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Emissor automático de NF-e (Via regra)">Emissor
+                            automático de NF-e (Via regra)</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Importação de XML">Importação de XML</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Configuração de NCM / Massa">Configuração de NCM / Massa
+                        </div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Comprar pacote adicional">Comprar pacote adicional</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="price-plane-item">
+                    <div class="price-plane-ul">
+                        <div class="fs-20px blue-90" data-lang="Logística e estoque">Logística e estoque</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Módulo de WMS para gestão de armazém">Módulo de WMS para
+                            gestão de armazém</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Sincronizar estoque em tempo real">Sincronizar estoque
+                            em tempo real</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Lembrete de estoque baixo">Lembrete de estoque baixo
+                        </div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Configuração de NCM / Massa">Configuração de NCM / Massa
+                        </div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Quantidade de armazém">Quantidade de armazém</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li">3</div>
+                        <div class="price-plane-li">5</div>
+                        <div class="price-plane-li">8</div>
+                        <div class="price-plane-li">10</div>
+                        <div class="price-plane-li">15</div>
+                        <div class="price-plane-li">20</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Rastreamento do pedido">Rastreamento do pedido</div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                    </div>
+                    <div class="price-plane-ul">
+                        <div class="fs-14px blue-65" data-lang="Calculadora e simulador de frete"">Calculadora e simulador de frete</div>
+                    </div>
+                    <div class=" price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65">PDA</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+
+                    </div>
+                    <div class="price-plane-item">
+                        <div class="price-plane-ul">
+                            <div class="fs-20px blue-90" data-lang="Atendimento ao cliente">Atendimento ao cliente</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Implementação">Implementação</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li" data-lang="Central de ajuda">Central de ajuda</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp></div>
+                            <div class="price-plane-li" data-lang="Suporte dedicado">Suporte dedicado</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Treinamentos">Treinamentos</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li" data-lang="Central de ajuda">Central de ajuda</div>
+                            <div class="price-plane-li">On-line</div>
+                            <div class="price-plane-li">On-line</div>
+                            <div class="price-plane-li">On-line</div>
+                            <div class="price-plane-li">On-line</div>
+                            <div class="price-plane-li" data-lang="Suporte dedicado">Suporte dedicado</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65">Importação de XML</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li" data-lang="Central de ajuda">Central de ajuda</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li">WhatsApp</div>
+                            <div class="price-plane-li" data-lang="Suporte dedicado">Suporte dedicado</div>
+                        </div>
+                    </div>
+                    <div class="price-plane-item">
+                        <div class="price-plane-ul">
+                            <div class="fs-20px blue-90" data-lang="Relatórios">Relatórios</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Armazenamento de dados de clientes">Armazenamento de
+                                dados de clientes</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Relatório de faturamento (Despesas/Lucro)">Relatório
+                                de faturamento (Despesas/Lucro)</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Relatório de estoque (Entrada/Saída)">Relatório de
+                                estoque (Entrada/Saída)</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Relatório de vendas">Relatório de vendas</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Relatório de consolidação de picking (WMS)">
+                                Relatório de consolidação de picking (WMS)</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Performance mensal/semanal/diária">Performance
+                                mensal/semanal/diária</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="fs-14px blue-65" data-lang="Relatório de índice da loja">Relatório de índice da
+                                loja</div>
+                        </div>
+                        <div class="price-plane-ul">
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                            <div class="price-plane-li"><img src="assets/svg/icon-success.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <section id="clients" class="clients section light-background">
+                <div class="container" data-aos="zoom-in">
+                    <div class="container-content">
+                        <div class="fs-39px blue-90 mb-40px Poppins"
+                            data-lang="Conectada aos maiores marketplaces do Brasil.">
+                            Conectada aos maiores marketplaces do Brasil.</div>
+                        <div class="swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 1000,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                },
+                "480": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 50
+                },
+                "640": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 50
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 50
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 50
+                }
+              }
+            }
+                        </script>
+                            <div class="swiper-wrapper align-items-center platform-icon">
+                                <div class="swiper-slide"><img src="assets/svg/AliExpress.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Amazon.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Mercado.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/TikTok.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Kwai.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Shopee.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/SHEIN.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Temu.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Shopify.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Nuvemshop.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="assets/svg/Magalu.svg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container ask-mode">
+                <div class="container-content">
+                    <div class="fs-49px blue-90 mb-40px Poppins" data-lang="Perguntas frequentes">Perguntas frequentes
+                    </div>
+                    <div class="ask-item">
+                        <div class="ask-item-text blue-90 fw-500" data-lang="Quais as formas de pagamento são aceitas?">
+                            Quais as formas de pagamento são aceitas? </div>
+                        <div class="ask-item-text blue-65"
+                            data-lang="Atualmente, aceitamos cartão de crédito e PIX para garantir mais praticidade e segurança nas suas transações">
+                            Atualmente, aceitamos cartão de crédito e PIX para garantir
+                            mais
+                            praticidade e segurança nas suas transações.</div>
+                    </div>
+                    <div class="ask-item">
+                        <div class="ask-item-text blue-90 fw-500" data-lang="Posso alterar o plano contratado?">Posso
+                            alterar o plano contratado?</div>
+                        <div class="ask-item-text blue-65"
+                            data-lang="Sim, é possível alterar o plano a qualquer momento, de maneira rápida e sem complicações.">
+                            Sim, é possível alterar o plano a qualquer momento, de
+                            maneira
+                            rápida e sem complicações.</div>
+                    </div>
+                    <div class="ask-item">
+                        <div class="ask-item-text blue-90 fw-500"
+                            data-lang="Não é obrigatório, o plano grátis não exige que tenha um cartão de crédito cadastrado nem possui qualquer cobrança de taxa.">
+                            Não é obrigatório, o plano grátis não exige que tenha
+                            um
+                            cartão
+                            de crédito cadastrado nem possui qualquer cobrança de taxa. </div>
+                        <div class="ask-item-text blue-65"
+                            data-lang="Não é obrigatório, o plano grátis não exige que tenha um cartão de crédito cadastrado nem possui qualquer cobrança de taxa.">
+                            Não é obrigatório, o plano grátis não exige que tenha um
+                            cartão
+                            de crédito cadastrado nem possui qualquer cobrança de taxa. </div>
+                    </div>
+                    <div class="ask-item">
+                        <div class="ask-item-text blue-90 fw-500"
+                            data-lang="Como é garantida a segurança dos dados financeiros no sistema?">Como é garantida
+                            a segurança dos dados financeiros no
+                            sistema?
+                        </div>
+                        <div class="ask-item-text blue-65"
+                            data-lang="Asseguramos a proteção dos seus dados sensíveis através da tecnologia de monitoramento em tempo real, oferecendo mais confiabilidade e tranquilidade para vocês.">
+                            Asseguramos a proteção dos seus dados sensíveis através da
+                            tecnologia de monitoramento em tempo real, oferecendo mais confiabilidade e tranquilidade
+                            para
+                            vocês.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container more-info">
+                <div class="container-content">
+                    <div class="fs-49px blue-90 mb-12px Poppins" data-lang="Precisa de mais informações?">Precisa de
+                        mais
+                        informações?</div>
+                    <div class="fs-20px blue-65 mb-24px" data-lang="Encontre respostas na nossa central de ajuda.">
+                        Encontre respostas na nossa central de ajuda.</div>
+                    <div class="fs-16px blue " data-lang="Central de ajuda.">Central de ajuda. <img
+                            src="assets/svg/Arrow-right.svg" alt=""></div>
+                </div>
+            </div>
+
+            <div id="footer"></div>
+            <div id="messageContainer"
+                class="message-container fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center space-y-3 w-full max-w-xs">
+            </div>
+            <!-- Scroll Top -->
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                    class="bi bi-arrow-up-short"></i></a>
+
+            <!-- Preloader -->
+            <div id="preloader"></div>
+
+            <!-- Vendor JS Files -->
+            <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/vendor/php-email-form/validate.js"></script>
+            <script src="assets/vendor/aos/aos.js"></script>
+            <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+            <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+            <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+            <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+            <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+            <!-- Main JS File -->
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/language.js"></script>
+
+</body>
+<script>
+    const priceList = document.querySelector('.price-list');
+    const summarize = document.querySelectorAll('.summarize')
+    const pricePlane = document.querySelector('.price-plane')
+    // 或通过位置变化判断（滚动时触发）
+    let wasSticky = false;
+    window.addEventListener('scroll', () => {
+        const rect = priceList.getBoundingClientRect();
+        const isCurrentlySticky = rect.top === 72; // 假设 top: 72px
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        const bottomToTop = pricePlane.getBoundingClientRect().bottom - 300
+        if (bottomToTop > 0) {
+            priceList.style.position = 'sticky'
+        } else {
+            priceList.style.position = 'relative'
+        }
+        if (isCurrentlySticky && !wasSticky) {
+            console.log('元素已触发 sticky 效果');
+            wasSticky = true;
+            for (let i = 0; i < summarize.length; i++) {
+                summarize[i].style.display = 'none'
+            }
+
+
+        } else if (!isCurrentlySticky && wasSticky) {
+            wasSticky = false;
+            console.log('元素已退出 sticky 状态');
+            for (let i = 0; i < summarize.length; i++) {
+                summarize[i].style.display = 'block'
+            }
+
+        }
+
+
+        // if(pricePlane>scrollY)
+        // const bottomToTop = rect.bottom + scrollY;
+    });
+    const monthBtn = document.getElementById('month')
+    const yearBtn = document.getElementById('year')
+    const monthPrice = document.getElementById('month-price')
+    const yearPRice = document.getElementById('year-price')
+    monthBtn.addEventListener('click', () => {
+        monthBtn.classList.add('checked-btn')
+        yearBtn.classList.remove('checked-btn')
+        monthPrice.style.display = 'flex'
+        yearPRice.style.display = 'none'
+    })
+    yearBtn.addEventListener('click', () => {
+        yearBtn.classList.add('checked-btn')
+        monthBtn.classList.remove('checked-btn')
+        monthPrice.style.display = 'none'
+        yearPRice.style.display = 'flex'
+    })
+</script>
+
+</html>

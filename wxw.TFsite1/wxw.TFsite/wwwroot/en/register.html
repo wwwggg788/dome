@@ -1,0 +1,39 @@
+<!-- en/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/wwwroot/" />
+    <meta charset="UTF-8">
+    <link href="assets/img/tferp.ico" rel="icon">
+    <script>
+        // 获取原始页面名称（如about.html）
+        const originalPage = window.location.pathname.split('/').pop() || 'register.html';
+
+        // 动态加载根目录下的实际页面
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch(`/${originalPage}`)
+                .then(response => response.text())
+                .then(html => {
+                    // 替换当前页面内容
+                    document.open();
+                    document.write(html);
+                    document.close();
+                    const search = window.location.search;
+                    const hash = window.location.hash;
+
+                    // 修改历史记录，保持URL为/en/xxx.html
+                    window.history.replaceState({}, '', `/en/${originalPage}${search}${hash}`);
+                })
+                .catch(error => {
+                    console.error('加载页面失败:', error);
+                    document.body.innerHTML = `<h1>页面未找到 (${originalPage})</h1>`;
+                });
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
